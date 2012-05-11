@@ -10,5 +10,4 @@ until after a final grade has been assigned for the course (September 2012).
 * Joseph Woodruff
 * Evan Belt
 * Ruvim Micsanschi
-
-
+* Dan Sweet
