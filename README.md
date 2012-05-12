@@ -12,3 +12,4 @@ until after a final grade has been assigned for the course (September 2012).
 * Ruvim Micsanschi
 * Dan Sweet
 * Yuxin Gao
+* Minh Pham
