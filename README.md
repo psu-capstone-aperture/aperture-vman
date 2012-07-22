@@ -13,3 +13,4 @@ until after a final grade has been assigned for the course (September 2012).
 * Dan Sweet
 * Yuxin Gao
 * Minh Pham
+* Jon Trent
