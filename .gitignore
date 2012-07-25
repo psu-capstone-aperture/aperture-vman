@@ -1,6 +1,10 @@
-.eunit
-deps
-priv
-*.o
-*.beam
-*.plt
+# whitelist mode, ignore everything first
+*
+
+!*/
+!backup.sql
+!README.md
+!COPYING
+!COPYRIGHT.txt
+!tools/*
+!sites/all/themes/aperture/*
