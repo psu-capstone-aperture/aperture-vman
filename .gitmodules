@@ -7,3 +7,6 @@
 [submodule "sites/all/modules/pathauto"]
 	path = sites/all/modules/pathauto
 	url = git://drupalcode.org/project/pathauto.git
+[submodule "sites/all/modules/token"]
+	path = sites/all/modules/token
+	url = git://drupalcode.org/project/token.git
