@@ -3,4 +3,7 @@
 	url = git://drupalcode.org/project/zen.git
 [submodule "sites/all/modules/chain_menu_access"]
 	path = sites/all/modules/chain_menu_access
-	url = http://drupalcode.org/project/chain_menu_access.git
+	url = git://drupalcode.org/project/chain_menu_access.git
+[submodule "sites/all/modules/pathauto"]
+	path = sites/all/modules/pathauto
+	url = git://drupalcode.org/project/pathauto.git
