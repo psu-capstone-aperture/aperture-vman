@@ -1,0 +1,97 @@
+#!/bin/bash
+
+#Copyright (C) 2012 Joseph Woodruff
+#VM Manager shell replacement for controlling libvirt
+#Released under the MIT license, see COPYING for details.
+
+export USER=$(whoami)
+
+export TEMP="/tmp/$USER-dialog.ans"
+
+export LIBVIRT_DEFAULT_URI="qemu:///system"
+
+power ()
+{
+	STATE=$(virsh domstate $USER)
+	echo $STATE > /tmp/test.lol
+	if [[ $STATE == "running" ]];
+	then
+
+		dialog --backtitle "VM Manager" --title "Power Manager" \
+		--menu "VM status: $STATE" 0 0 0 \
+		"shutdown" "Send ACPI shutdown (soft)" \
+		"destroy" "Hard shutdown" \
+		"reset" "Reset button" 2> $TEMP
+
+	elif [[ $STATE == "shut off" ]];
+	then
+
+		dialog --backtitle "VM Manager" --title "Power Manager" \
+		--menu "VM status: $STATE" 0 0 0 \
+		"start" "Power-on machine" 2> $TEMP
+
+	else
+
+		dialog --backtitle "VM Manager" --title "Power Manager" \
+		--msgbox "VM status: $STATE \n \n No options available." 0 0
+		
+		return
+	fi
+
+	if [[ $? != 0 ]]
+	then
+		return
+	fi
+
+	case "$(cat $TEMP)" in
+
+		shutdown)
+			virsh shutdown $USER ;;
+		destroy)
+			virsh destroy $USER ;;
+		reset)
+			virsh reset $USER ;;
+		start)
+			virsh start $USER ;;
+
+	esac
+}
+
+snapshots () {
+	# do something
+	dialog --msgbox "Not implemented yet." 0 0
+	return
+}
+
+main () {
+
+	while true;
+	do
+
+	dialog --backtitle "VM Manager" --cancel-label Exit \
+	--title "Welcome, $USER" \
+	--menu "Select action:" 0 0 0 \
+	"power" "Control VM power state" \
+	"snapshots" "Go to backup/restore center." 2> $TEMP
+
+	if [[ $? != 0 ]]
+	then
+		break
+	else
+		if [[ $(cat $TEMP) == "power" ]]
+		then
+			power
+		elif [[ $(cat $TEMP) == "snapshots" ]]
+		then
+			snapshots
+		fi
+	fi
+
+	done
+}
+
+main
+
+rm $TEMP
+
+exit 0
