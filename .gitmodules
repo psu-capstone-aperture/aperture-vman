@@ -10,3 +10,6 @@
 [submodule "sites/all/modules/token"]
 	path = sites/all/modules/token
 	url = git://drupalcode.org/project/token.git
+[submodule "sites/all/modules/path_access"]
+	path = sites/all/modules/path_access
+	url = git://drupalcode.org/project/path_access.git
