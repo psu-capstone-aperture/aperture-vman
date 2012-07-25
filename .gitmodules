@@ -1,0 +1,3 @@
+[submodule "sites/all/themes/zen"]
+	path = sites/all/themes/zen
+	url = git://drupalcode.org/project/zen.git
