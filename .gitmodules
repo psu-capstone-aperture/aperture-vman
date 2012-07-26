@@ -19,3 +19,6 @@
 [submodule "sites/all/modules/date"]
 	path = sites/all/modules/date
 	url = git://drupalcode.org/project/date.git
+[submodule "sites/all/modules/views"]
+	path = sites/all/modules/views
+	url = git://drupalcode.org/project/views.git
