@@ -22,3 +22,6 @@
 [submodule "sites/all/modules/views"]
 	path = sites/all/modules/views
 	url = git://drupalcode.org/project/views.git
+[submodule "sites/all/modules/ctools"]
+	path = sites/all/modules/ctools
+	url = git://drupalcode.org/project/ctools.git
