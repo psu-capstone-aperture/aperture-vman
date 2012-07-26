@@ -19,3 +19,6 @@
 [submodule "sites/all/modules/rules"]
 	path = sites/all/modules/rules
 	url = git://drupalcode.org/project/rules.git
+[submodule "sites/all/modules/entity"]
+	path = sites/all/modules/entity
+	url = git://drupalcode.org/project/entity.git
