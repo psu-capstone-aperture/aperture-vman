@@ -13,3 +13,6 @@
 [submodule "sites/all/modules/path_access"]
 	path = sites/all/modules/path_access
 	url = git://drupalcode.org/project/path_access.git
+[submodule "sites/all/modules/content_access"]
+	path = sites/all/modules/content_access
+	url = git://drupalcode.org/project/content_access.git
