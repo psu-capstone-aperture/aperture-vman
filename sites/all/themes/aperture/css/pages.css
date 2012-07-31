@@ -340,7 +340,7 @@ h1 {
 	text-transform: uppercase;
 	font-size: 22px;
 	color: #CCCCCC;
-	margin: 0px;
+	margin: 0px 0px 15px 0px;
 	padding: 0px;
 	letter-spacing: -1px;
 }
@@ -388,9 +388,9 @@ h4 {
 #personal-info {
 	font-family: 'Droid Sans', sans-serif;
 	font-size: 12px;
-	margin: 0px 0px 0px 0px;
+	margin: 15px 0px 0px 7px;
 	text-align: left;
-	line-height: 1.0em;
+	line-height: 1.6em;
 }
 
 .bg-shadow {
@@ -450,7 +450,7 @@ a:active {
 }
 
 .sub-header {
-	margin: 25px 15px 0px 0px;
+	margin: 0px 15px 0px 0px;
 }
 
 .right-sidebar {
@@ -473,6 +473,19 @@ a:active {
 
 /* ----------- END PAGE STYLING --------------- */
 
+
+
+/* 404 Error Style */
+
+.error-pages {
+	font-size: 38px;
+	color: rgba(196, 196, 196, 0.55);
+	text-shadow: 0px 2px 3px white;
+	text-transform:uppercase;
+}
+
+
+/*End of 404 Styling */
 
 
 /*
