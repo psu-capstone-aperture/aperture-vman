@@ -13,6 +13,18 @@
 [submodule "sites/all/modules/path_access"]
 	path = sites/all/modules/path_access
 	url = git://drupalcode.org/project/path_access.git
+[submodule "sites/all/modules/calendar"]
+	path = sites/all/modules/calendar
+	url = git://drupalcode.org/project/calendar.git
+[submodule "sites/all/modules/date"]
+	path = sites/all/modules/date
+	url = git://drupalcode.org/project/date.git
+[submodule "sites/all/modules/views"]
+	path = sites/all/modules/views
+	url = git://drupalcode.org/project/views.git
+[submodule "sites/all/modules/ctools"]
+	path = sites/all/modules/ctools
+	url = git://drupalcode.org/project/ctools.git
 [submodule "sites/all/modules/content_access"]
 	path = sites/all/modules/content_access
 	url = git://drupalcode.org/project/content_access.git
@@ -22,3 +34,6 @@
 [submodule "sites/all/modules/entity"]
 	path = sites/all/modules/entity
 	url = git://drupalcode.org/project/entity.git
+[submodule "sites/all/modules/privatemsg"]
+	path = sites/all/modules/privatemsg
+	url = git://drupalcode.org/project/privatemsg.git
