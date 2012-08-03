@@ -543,7 +543,8 @@ textarea {
   *vertical-align: middle; /* 3 */
 }
 
-#edit-name {
+#edit-name, #edit-pass, #edit-mail, #edit-field-first-name-und-0-value, #edit-field-last-name-und-0-value, #edit-field-phone-number-und-0-value, 
+#edit-field-birthday-und-0-value, #edit-field-current-employer-und-0-value, #edit-field-emergency-contact-und-0-value, #edit-field-emergency-number-und-0-value, #edit-field-language-und-0-value {
 	font-family: 'Droid Sans', sans-serif;
 	padding: 7px;
 	width: 200px;
@@ -559,27 +560,14 @@ textarea {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
-}
-
-#edit-pass {
-	padding: 7px;
-	width: 200px;
-	font-size: 12px;
-	margin-left:-2px;
-	background: #F9F9F9;
-	border: 0;
-	color: #777;
-	border-top: 1px solid #E1E1E1;
-	border-left: 1px solid #E1E1E1;
-	border-bottom: 1px solid #F0F0F0;
-	border-right: 1px solid #F0F0F0;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
+	float:right;
+	margin-right:308px;
+	margin-left: 10px;
 }
 
 #edit-submit {
-	margin-left:562px;
+	margin-left:583px;
+	margin-top:10px;
 }
 
 /*
@@ -671,8 +659,26 @@ input::-moz-focus-inner {
  */
 
 textarea {
-  overflow: auto; /* 1 */
-  vertical-align: top; /* 2 */
+	resize: none;
+	padding: 7px;
+	font-size: 12px;
+	color: #666;
+	overflow: auto;
+	background: #F9F9F9;
+	border: 0;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.form-textarea-wrapper {
+	width:480px;
+	height: 150px;
+	margin-left:428px;
+	resize: none;
 }
 
 
@@ -706,4 +712,106 @@ th {
 
 tbody {
   border-top: none;
+}
+
+
+
+
+/* =============================================================================
+   STYLE FOR SYSTEM MESSAGES 
+   ========================================================================== */
+
+
+div.messages {
+  background-position: 8px 8px; /* LTR */
+  background-repeat: no-repeat;
+  border: 1px solid;
+  margin: 6px 0;
+  padding: 10px 10px 10px 50px; /* LTR */
+}
+
+div.status {
+  background-image: url(../../misc/message-24-ok.png);
+  border-color: #be7;
+}
+div.status,
+.ok {
+  color: #234600;
+}
+div.status,
+table tr.ok {
+  background-color: #f8fff0;
+}
+
+div.warning {
+  background-image: url(../../misc/message-24-warning.png);
+  border-color: #ed5;
+}
+div.warning,
+.warning {
+  color: #840;
+}
+div.warning,
+table tr.warning {
+  background-color: #fffce5;
+}
+
+div.error {
+ border: 1px solid #fbeed5;
+}
+div.error,
+.error {
+  color: #8c2e0b;
+}
+div.error,
+table tr.error {
+  background-color: #E66969;
+  border-color: #E41414;
+  color: #5C2828;
+  text-shadow: 0 1px 0 rgba(207, 189, 189, 0.5);
+  border: 1px solid #DDDDDD;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+div.error p.error {
+  color: #333;
+}
+
+div.messages ul {
+  margin: 0 0 0 1em; /* LTR */
+  padding: 0;
+}
+div.messages ul li {
+  list-style-image: none;
+}
+
+
+
+/* =============================================================================
+   STYLE FOR USER PROFILE
+   ========================================================================== */
+   
+   
+   .profile {
+  clear: both;
+  margin: 0 0 0 7px;
+}
+.profile .user-picture {
+  float: right; /* LTR */
+  margin: 0 1em 1em 0; /* LTR */
+}
+.profile h3 {
+  border-bottom: 1px solid #ccc;
+  margin-right:7px;
+}
+.profile dl {
+  margin: 0 0 1.5em 0;
+}
+.profile dt {
+  margin: 0 0 0.2em 0.3em;
+  font-weight: bold;
+}
+.profile dd {
+  margin: 0 0 1em 0.3em;
 }
