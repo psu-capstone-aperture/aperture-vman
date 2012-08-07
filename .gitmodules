@@ -37,3 +37,6 @@
 [submodule "sites/all/modules/node_export"]
 	path = sites/all/modules/node_export
 	url = git://drupalcode.org/project/node_export.git
+[submodule "sites/all/modules/uuid"]
+	path = sites/all/modules/uuid
+	url = git://drupalcode.org/project/uuid.git
