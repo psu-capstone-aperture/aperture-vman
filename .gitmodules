@@ -40,3 +40,6 @@
 [submodule "sites/all/modules/uuid"]
 	path = sites/all/modules/uuid
 	url = git://drupalcode.org/project/uuid.git
+[submodule "sites/all/modules/features"]
+	path = sites/all/modules/features
+	url = git://drupalcode.org/project/features.git
