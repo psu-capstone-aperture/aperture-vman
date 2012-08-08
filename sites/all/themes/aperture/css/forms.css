@@ -5,7 +5,8 @@
 
 
 .form-item { /* Wrapper for a form element (or group of form elements) and its label */
-  margin: 1em 0em 0em 20em;
+  margin: 1em 0em 0em 0em;
+  text-align:right;
 }
 
 .form-item input.error,
@@ -20,7 +21,20 @@
 	font-size: 12px;
 	color: #888;
 	display: inline;
-	text-align: right;
+	font-weight:normal;
+}
+
+.form-item-field-t-shirt-size-und, .form-item-field-education-und, #edit-field-tutor-before-und, #edit-field-tutoring-duration-und {
+	text-align:left;
+	margin-left:426px;
+}
+
+.form-item label[for=edit-field-certified-und], label[for=edit-field-know-paste-und], label[for=edit-field-skills-and-interests-und-0-value], label[for=edit-field-exp-teaching-und-0-value], label[for=edit-field-tennis-tutoring-und], label[for=edit-field-time-availability-und], label[for=edit-field-tutor-before-und], label[for=edit-field-more-on-tutor-und-0-value], label[for=edit-field-tutor-focus-und], label[for=edit-field-gender-preference-und], label[for=edit-field-grade-preference-und], label[for=edit-field-gpa-preference-und], label[for=edit-field-behavior-preference-und], label[for=edit-field-tutoring-duration-und], label[for=edit-field-athlete-group-preference-und],label[for=edit-field-case-study-und-0-value], label[for=edit-field-other-comments-und-0-value], label[for=edit-field-why-paste-und-0-value] {
+	margin-right: 535px;	
+}
+
+.form-item-field-t-shirt-size-und label[for=edit-field-t-shirt-size-und], .form-item-field-education-und label[for=edit-field-education-und] {
+	margin-left: -88px;	
 }
 
 .form-item label.option { /* The label for a radio button or checkbox */
@@ -40,6 +54,12 @@
 .form-checkboxes .form-item,
 .form-radios .form-item { /* Pack groups of checkboxes and radio buttons closer together */
   margin: 0; /* Drupal core uses "0.4em 0" */
+  text-align:left;
+}
+
+.form-checkboxes {
+	text-align:left;
+	margin-left: 426px;
 }
 
 .form-submit { /* The submit button */
