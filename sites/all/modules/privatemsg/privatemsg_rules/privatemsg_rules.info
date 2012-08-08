@@ -1,0 +1,8 @@
+name = Privatemsg Rules Integrations
+description = Integrates Rules with Privatemsg, allows to act on message events and send private messages
+package = Mail
+core = 7.x
+dependencies[] = privatemsg
+dependencies[] = privatemsg_filter
+dependencies[] = rules
+files[]=privatemsg_rules.rules.inc
