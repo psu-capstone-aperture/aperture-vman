@@ -112,7 +112,7 @@ body {
  */
 
 #content {
-	width: 100%;
+	width:100%;
 	float: left;
 	line-height: 22px;
 	padding: 15px 0px 15px 0px;
@@ -513,4 +513,13 @@ a:active {
  */
 
 .region-bottom { /* Wrapper for any blocks placed in the page bottom region */
+}
+
+/*add event action links */
+.action-links {
+	text-align:center;
+	list-style-type: none;
+	text-transform:uppercase;
+	font-size:13px;
+	margin-right:0px 10px 0px 10px;
 }
