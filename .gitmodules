@@ -31,9 +31,6 @@
 [submodule "sites/all/modules/entity"]
 	path = sites/all/modules/entity
 	url = git://drupalcode.org/project/entity.git
-[submodule "sites/all/modules/privatemsg"]
-	path = sites/all/modules/privatemsg
-	url = git://drupalcode.org/project/privatemsg.git
 [submodule "sites/all/modules/node_export"]
 	path = sites/all/modules/node_export
 	url = git://drupalcode.org/project/node_export.git
