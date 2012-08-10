@@ -1,0 +1,105 @@
+/**
+ * @file
+ *
+ * Custom styles for Messages page. It basically overrides key styles from the 
+ * privatemsg module.
+ */
+
+a:link.inboxCount {
+	color: red;
+}
+a:visited.inboxCount {
+	color: red;
+}
+a:hover.inboxCount {
+	color: #FF995C;
+}
+a:active.inboxCount {
+	color: yellow;
+}
+
+#privatemsg-list-form select {
+	background: #F9F9F9;
+	border: 1px solid #BCBCBC;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+	        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+	color: #888;
+	display: inline-block;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	height: 28px;
+	padding: 6px 12px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+#privatemsg-list-form select:hover {
+	color: #555;
+}
+#privatemsg-list-form select:active {
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+
+.action-links li {
+	list-style-type: none;
+}
+
+th.select-all:after {
+	content: " Select All";
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 0.6em;
+	text-transform: uppercase;
+}
+
+.action-links,
+#edit-filter legend,
+.container-inline,
+table.privatemsg-list {
+	margin-left: 77px;
+}
+
+.privatemsg-header-subject,
+.privatemsg-header-participants,
+.privatemsg-header-lastupdated {
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 220px;
+}
+
+.privatemsg-list.form-checkbox {
+	text-align: left;
+}
+
+.form-item.form-type-checkbox {
+	margin-left: 0;
+}
+
+.form-item-recipient label,
+.form-item-subject label {
+	display: inline-block;
+	width: 65px;
+}
+
+#privatemsg-new .form-item-recipient,
+#privatemsg-new .form-item-subject,
+#privatemsg-new .form-type-textarea,
+#privatemsg-new .form-submit {
+	margin-left: 160px;
+	width: 630px;
+}
+
+#privatemsg-new .form-submit {
+	margin-right: 20px;
+	width: 111px;
+}
+
+.privatemsg-message-participants {
+	padding-left: 10px;
+}
+
