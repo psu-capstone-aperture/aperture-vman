@@ -12,3 +12,4 @@
 !sites/all/themes/aperture/*
 !sites/all/modules/privatemsg/*
 !sites/all/modules/privatemsg/
+!sites/all/themes/aperture/css/messages.css
