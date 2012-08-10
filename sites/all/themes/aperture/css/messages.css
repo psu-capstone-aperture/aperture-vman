@@ -91,6 +91,13 @@ table.privatemsg-list {
 #privatemsg-new .form-type-textarea,
 #privatemsg-new .form-submit {
 	margin-left: 160px;
+	text-align: left;
+	width: 630px;
+}
+
+#privatemsg-new .form-textarea-wrapper {
+	height: 120px;
+	margin-left: 0;
 	width: 630px;
 }
 
