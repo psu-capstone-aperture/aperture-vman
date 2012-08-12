@@ -112,7 +112,7 @@ body {
  */
 
 #content {
-	width: 100%;
+	width:100%;
 	float: left;
 	line-height: 22px;
 	padding: 15px 0px 15px 0px;
@@ -514,3 +514,78 @@ a:active {
 
 .region-bottom { /* Wrapper for any blocks placed in the page bottom region */
 }
+
+/*add event action links */
+.action-links {
+	text-align:center;
+	list-style-type: none;
+	text-transform:uppercase;
+	font-size:13px;
+	margin-right:0px 10px 0px 10px;
+}
+
+/* paragraph small style */
+
+p.small, div.small {
+	font-size: 9px;
+	margin-top: 0px;
+	color: #A4A4A4;
+	text-transform: uppercase;
+	text-align:right;
+	margin-right:50px;
+	opacity:0.7;s
+}
+p.small span, div.small span  {
+	color: red;
+}
+
+/* END PARAGRAPH STYLE */
+
+
+/* --------- RUN REPORT PAGE ------------ */
+
+.gen-report {
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 13px;
+	border:none;
+	width: 770px;
+
+}
+
+#head-report {
+	font-family: 'Homenaje', sans-serif;
+	text-transform: uppercase;
+	font-size: 18px;
+	color: rgba(155, 155, 155, 0.77);
+	letter-spacing: -1px;
+	text-shadow: 0px 1px 1px rgba(159, 159, 160, 0.1);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	background-color: #F1F1F1;
+	height: 30px;
+}
+
+.report-name-col-left {
+	padding-left:1px;
+	width: 335px;
+}
+
+.report-name-col-right {
+	border-radius: 5px;
+	width:100px;
+}
+
+.report-nums-head {
+	padding-left: 8px;
+	width: 15px;
+	border-radius: 5px;
+	font-size: 17px;
+	color:rgba(194, 194, 194, 0.58);
+}
+
+.report-nums {
+	font-size:12px;
+	padding-left:10px;
+	color:rgba(170, 170, 170, 0.55);
+}
+
+/* --------- END RUN REPORT PAGE ------------ */
