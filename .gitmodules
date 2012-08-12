@@ -43,3 +43,6 @@
 [submodule "sites/all/modules/cck_select_other"]
 	path = sites/all/modules/cck_select_other
 	url = git://drupalcode.org/project/cck_select_other.git
+[submodule "sites/all/modules/privatemsg"]
+	path = sites/all/modules/privatemsg
+	url = git://drupalcode.org/project/privatemsg.git
