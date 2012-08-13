@@ -32,6 +32,25 @@ h2.block-title { /* Block title */
 #block-block-1 { /* First block created with "Add block" link */
 }
 
+#block-block-1 p {
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	padding-left: 10px;
+}
+
+#block-block-2 p {
+	font-size: 15px;
+	font-weight: normal;
+	padding-left: 30px;
+}
+
+#block-block-3 p {
+	font-size: 15px;
+	font-weight: normal;
+	padding-left: 30px;
+}
+
 #block-blog-recent { /* "Recent blog posts" block */
 }
 
