@@ -46,3 +46,6 @@
 [submodule "sites/all/modules/privatemsg"]
 	path = sites/all/modules/privatemsg
 	url = git://drupalcode.org/project/privatemsg.git
+[submodule "sites/all/modules/login_destination"]
+	path = sites/all/modules/login_destination
+	url = git://drupalcode.org/project/login_destination.git
