@@ -62,6 +62,7 @@ stylesheets[all][] = css/comments.css
 stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/fields.css
 stylesheets[all][] = css/print.css
+stylesheets[all][] = css/messages.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
