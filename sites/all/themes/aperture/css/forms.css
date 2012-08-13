@@ -217,6 +217,8 @@ td.menu-disabled {
 .register-account {
 	position: absolute;
 	width: 175px;
-	top:323px;
-	left:427px;
+	top:320px;
+	left:440px;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 15px;
 }
