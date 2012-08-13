@@ -76,8 +76,8 @@
 	border-radius: 4px;
 	border: 1px solid #bcbcbc;
 
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+	/*-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12);*/
 
 	background-image: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
 	background-image: -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
@@ -197,4 +197,76 @@ form table .item-list ul {
 
 td.menu-disabled {
   background: #ccc;
+}
+
+#edit-name, #edit-pass, #edit-mail, #edit-field-first-name-und-0-value, #edit-field-last-name-und-0-value, #edit-field-phone-number-und-0-value, 
+#edit-field-birthday-und-0-value, #edit-field-current-employer-und-0-value, #edit-field-emergency-contact-und-0-value, #edit-field-emergency-number-und-0-value, #edit-field-language-und-0-value{
+	font-family: 'Droid Sans', sans-serif;
+	padding: 7px;
+	width: 200px;
+	font-size: 12px;
+	margin: 0px 0px 0x 2px;
+	background: #F9F9F9;
+	border: 0;
+	color: #777;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	float:right;
+	margin-right:308px;
+	margin-left: 10px;
+}
+
+#edit-submit {
+	margin-left:583px;
+	margin-top:10px;
+}
+
+.run-report-wrapper {
+	width:460px;
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+#from-date, #to-date {
+	font-family: 'Droid Sans', sans-serif;
+	padding: 7px;
+	width: 150px;
+	font-size: 12px;
+	margin: 0px 0px 0x 2px;
+	background: #fcfcfc;
+	border: 0;
+	color: #777;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-left: 10px;
+}
+
+.error-label-start {
+	font-size: 9px;
+	width: 200px;
+	display: inline;
+	text-transform: uppercase;
+	color: #747474;
+	position: absolute;
+	left: 282px;
+}
+
+.error-label-end {
+	font-size:9px;
+	width:200px;
+	display:inline;
+	text-transform: uppercase;
+	color: #747474;
+	position: absolute;
+	left: 465px;
 }
