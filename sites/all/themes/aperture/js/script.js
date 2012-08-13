@@ -13,9 +13,4 @@
 (function ($, Drupal, window, document, undefined) {
 
 // Place your code here.
-(function($) {
-	$('.form-type-radio[value=_none]').parent().hide();
-})(jQuery);
-
 })(jQuery, Drupal, this, this.document);
-
