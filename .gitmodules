@@ -43,3 +43,6 @@
 [submodule "sites/all/modules/features"]
 	path = sites/all/modules/features
 	url = git://drupalcode.org/project/features.git
+[submodule "cck_select_other"]
+	path = cck_select_other
+	url = git://drupalcode.org/project/cck_select_other.git
