@@ -543,33 +543,6 @@ textarea {
   *vertical-align: middle; /* 3 */
 }
 
-#edit-name, #edit-pass, #edit-mail, #edit-field-first-name-und-0-value, #edit-field-last-name-und-0-value, #edit-field-phone-number-und-0-value, 
-#edit-field-birthday-und-0-value, #edit-field-current-employer-und-0-value, #edit-field-emergency-contact-und-0-value, #edit-field-emergency-number-und-0-value, #edit-field-language-und-0-value {
-	font-family: 'Droid Sans', sans-serif;
-	padding: 7px;
-	width: 200px;
-	font-size: 12px;
-	margin: 0px 0px 0x 2px;
-	background: #F9F9F9;
-	border: 0;
-	color: #777;
-	border-top: 1px solid #E1E1E1;
-	border-left: 1px solid #E1E1E1;
-	border-bottom: 1px solid #F0F0F0;
-	border-right: 1px solid #F0F0F0;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	float:right;
-	margin-right:308px;
-	margin-left: 10px;
-}
-
-#edit-submit {
-	margin-left:583px;
-	margin-top:10px;
-}
-
 /*
  * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
  */
@@ -679,6 +652,7 @@ textarea {
 	height: 150px;
 	margin-left:428px;
 	resize: none;
+	
 }
 
 
