@@ -96,7 +96,7 @@ function convertUnixTimeToHoursMinutes($unixTime) {
 <form name="get_date" action="" method="post" autocomplete="off">
 <input id="from-date" type="text" name="startDate" placeholder="Start Date" required />
 <input id="to-date"type="text" name="endDate" placeholder="End Date" required />
-<input class="form-submit" type="submit" name="submit" value="GO" />
+<button class="form-submit" type="submit" name="submit" value="GO" >GO</button>
 <input class="saveToScv" type="checkbox" name="saveToCSV" value="1" /> <div class="checkboxText">Save to .CSV</div>
 </form></div>
 <!-- END FORM -->
