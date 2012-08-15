@@ -52,3 +52,9 @@
 [submodule "sites/all/modules/login_destination"]
 	path = sites/all/modules/login_destination
 	url = git://drupalcode.org/project/login_destination.git
+[submodule "sites/all/modules/recaptcha"]
+	path = sites/all/modules/recaptcha
+	url = git://drupalcode.org/project/recaptcha.git
+[submodule "sites/all/modules/captcha"]
+	path = sites/all/modules/captcha
+	url = git://drupalcode.org/project/captcha.git

@@ -378,3 +378,14 @@ td.menu-disabled {
 	font-weight: normal;
 	display: ;
 }
+
+.captcha.form-wrapper {
+	font-family: 'Droid Sans', sans-serif;
+        text-transform: uppercase;
+        font-size: 12px;
+	margin-left: 100px;
+        color: #888;
+        display: inline;
+        font-weight:normal;
+}
+
