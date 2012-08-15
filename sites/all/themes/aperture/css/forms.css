@@ -249,9 +249,11 @@ td.menu-disabled {
 }
 
 .run-report-wrapper {
-	width:460px;
+	width:510px;
 	margin-left:auto;
-	margin-right:auto;	
+	margin-right:auto;
+	text-transform:uppercase;
+	font-size: 10px;
 }
 
 #from-date, #to-date {
@@ -280,7 +282,7 @@ td.menu-disabled {
 	text-transform: uppercase;
 	color: #747474;
 	position: absolute;
-	left: 282px;
+	left: 240px;
 }
 
 .error-label-end {
@@ -290,5 +292,19 @@ td.menu-disabled {
 	text-transform: uppercase;
 	color: #747474;
 	position: absolute;
-	left: 465px;
+	left: 422px;
+}
+
+.saveToScv {
+	font-size:11px;
+	margin-left:10px;
+	vertical-align: middle;
+	margin-top: 1px;
+}
+
+.checkboxText {
+	width:auto;
+	display:inline;
+	vertical-align: middle;
+	color: #8B8B8B;
 }

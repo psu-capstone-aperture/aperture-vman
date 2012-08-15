@@ -1,7 +1,7 @@
-
 <?php
-/* RETREIVE DATA FROM DATABASE, FORMAT AND DISPLAY */
-function runReport($startDate, $endDate) {
+function runReport($startDate, $endDate, $isCheckboxSet) {
+	$offset = timeOffsetFromGMTToPST();
+	$userCount = 0;
 	echo "<table class=\"gen-report\" align=\"center\" border=\"0\">
 	<tr id=\"head-report\">
 		<td class=\"report-nums-head\">#</td>
@@ -9,68 +9,95 @@ function runReport($startDate, $endDate) {
 		<td>Username</td>
 		<td  class=\"report-name-col-right\">Total Time</td>
 	</tr> ";
-	// get name and user id from the users table
-	$calUsers = db_query('SELECT u.name, u.uid, first.field_first_name_value, first.entity_id, last.field_last_name_value, last.entity_id FROM {users} u INNER JOIN {field_data_field_first_name} first INNER JOIN {field_data_field_last_name} last  ON u.uid = last.entity_id AND u.uid = first.entity_id');
-	$numOfUsers = 0;
-	// for each user get node_id, node_type and user_id
-	foreach ($calUsers as $user) {
-		++$numOfUsers;
-		//display table for every user
-		echo "<tr><td class=\"report-nums\">$numOfUsers</td><td class=\"report-name-col-left\">$user->field_first_name_value $user->field_last_name_value</td><td>$user->name</td>";
 
-		$totalTime = 0;
-		// store data from the sql request
-		$calEvents = db_query('SELECT nid, type, uid FROM {node} n WHERE n.uid = :uid AND n.type = :eventType', array(':uid' => $user -> uid, ':eventType' => "event"));
+	/* RETREIVE DATA FROM DATABASE SORTED BY LASTNAME */
+	$calEvents = db_query('SELECT u.name, u.uid, first.field_first_name_value, first.entity_id, last.field_last_name_value, last.entity_id, n.nid, n.type, n.uid, fd.entity_id, fd.field_event_date_value, fd.field_event_date_value2
+FROM users u INNER JOIN field_data_field_first_name first INNER JOIN field_data_field_last_name last INNER JOIN node n INNER JOIN field_data_field_event_date fd
+ON u.uid = last.entity_id AND u.uid = first.entity_id AND n.uid = u.uid AND fd.entity_id = n.nid
+ORDER BY first.field_first_name_value');
 
-		// for every event get the time
-		foreach ($calEvents as $singleEvent) {
-			$volunteeringTime = db_query('SELECT entity_id, field_event_date_value, field_event_date_value2 FROM {field_data_field_event_date} fd WHERE fd.entity_id = :nid', array(':nid' => $singleEvent -> nid));
+	//define a collection
+	$calCollection = array( array());
 
-			//get start and end time for every event
-			foreach ($volunteeringTime as $volTime) {
-					
-				//get start/end time and adjust to pacific timezone
-				$end_time = strtotime($volTime -> field_event_date_value2) - (7*60*60);
-				$start_time = strtotime($volTime -> field_event_date_value) - (7*60*60);
-				
-				//convert startDate/endDate to Unix timestamp and adjust for pacific timezone
-				$start_date = strtotime($startDate);
-				$end_date = strtotime($endDate);
-				
-				//Get only events between the dates
-				if ($start_date <= $start_time AND $end_date >= $end_time) {
-					$totalTime = $totalTime + abs($end_time - $start_time);
-				}
+	//convert startDate/endDate to Unix timestamp
+	$start_date = strtotime($startDate);
+	$end_date = strtotime($endDate);
+
+	foreach ($calEvents as $calEvent) {
+
+		//get start/end unix time and adjust to pacific timezone
+		$start_time = strtotime($calEvent -> field_event_date_value) - $offset;
+		$end_time = strtotime($calEvent -> field_event_date_value2) - $offset;
+		// number of hours in unix format
+		$volHours = abs($end_time - $start_time);
+
+		//Get only events between the dates
+		if ($start_date <= $start_time AND $end_date >= $end_time) {
+			if (array_key_exists($calEvent -> uid, $calCollection)) {
+				$calCollection[$calEvent -> uid]['volHours'] = $calCollection[$calEvent -> uid]['volHours'] + $volHours;
+			} else {
+				$calCollection[$calEvent -> uid] = array('name' => $calEvent -> name, 'uid' => $calEvent -> uid, 'firstName' => $calEvent -> field_first_name_value, 'lastName' => $calEvent -> field_last_name_value, 'volHours' => $volHours);
 			}
 		}
-
-		$hours = floor($totalTime / 3600);
-		$minutes = floor(($totalTime / 60) % 60);
-
-		//convert number of seconds into hours/minutes
-		echo "<td>$hours hrs $minutes mins</td></tr>";
+	}
+	$saveToCSVArray = array();
+	$saveToCSVCollection = array();
+	foreach ($calCollection as $arrayWithData) {
+		if ($arrayWithData == NULL) {
+			continue;
+		}
+		++$userCount;
+		$userName = $arrayWithData['name'];
+		$firstName = $arrayWithData['firstName'];
+		$lastName = $arrayWithData['lastName'];
+		$totalTime = convertUnixTimeToHoursMinutes($arrayWithData['volHours']);
+		//create cells and display data
+		echo "<tr><td class=\"report-nums\">$userCount</td><td class=\"report-name-col-left\">$firstName $lastName</td><td>$userName</td><td>$totalTime</td></tr>";
+		if ($isCheckboxSet == 1) {
+			#save data into 2d array
+			$saveToCSVArray = array($firstName, $lastName, $userName, $totalTime);
+			array_push($saveToCSVCollection, $saveToCSVArray);
+		}
 	}
 	echo "</table>";
 	echo "<div class=\"small\"><span>*</span> the report is based on the calendar data</div>";
+
+	if ($isCheckboxSet == 1) {
+		exportToCSV($saveToCSVCollection);
+		include ("download-report.php");
+	}
+
+}
+
+function exportToCSV($list) {
+	array_unshift($list, array("First Name", "Last Name", "Username", "Total Hours"));
+	$fp = fopen('report.csv', 'w');
+	foreach ($list as $fields) {
+		fputcsv($fp, $fields);
+	}
+	fclose($fp);
+}
+
+function timeOffsetFromGMTToPST() {
+	return abs(strtotime(gmdate("M d Y H:i", time())) - strtotime(date('M d Y H:i', time())));
+}
+
+function convertUnixTimeToHoursMinutes($unixTime) {
+	$hours = floor($unixTime / 3600);
+	$minutes = floor(($unixTime / 60) % 60);
+	return "$hours hrs $minutes mins";
 }
 ?>
-
-
-
 
 <!-- SELECT START/END DATE FORM -->
 <div class="run-report-wrapper">
 <form name="get_date" action="" method="post" autocomplete="off">
-	<input id="from-date" type="text" name="startDate" placeholder="Start Date" />
-	<input id="to-date"type="text" name="endDate" placeholder="End Date" />
-	<input class="form-submit" type="submit" name="submit" value="Run Report" />
+<input id="from-date" type="text" name="startDate" placeholder="Start Date" />
+<input id="to-date"type="text" name="endDate" placeholder="End Date" />
+<input class="form-submit" type="submit" name="submit" value="GO" />
+<input class="saveToScv" type="checkbox" name="saveToCSV" value="1" /> <div class="checkboxText">Save to .CSV</div>
 </form></div>
 <!-- END FORM -->
-
-
-
-
-
 
 <?php
 /* --- GET DATES, RUN REPORT ---- */
@@ -81,14 +108,17 @@ if (isset($_POST["submit"])) {
 	if (!$_POST['endDate']) {
 		echo "<div class=\"error-label-end\"><span style=\"color:red\">*</span>End date required</div>";
 	}
+	// check status of checkbox
+	$isCheckboxSet = (isset($_POST["saveToCSV"])) ? 1 : 0;
+
 	if ($_POST['startDate'] AND $_POST['endDate']) {
-		runReport($_POST["startDate"], $_POST["endDate"]);
+
+		runReport($_POST["startDate"], $_POST["endDate"], $isCheckboxSet);
 	}
 }
 ?>
 
 <div style="height: 5px;"></div>
-
 
 <?php
 /* --- INCLUDE SCRIPTS FOR DATE PICKER --- */
