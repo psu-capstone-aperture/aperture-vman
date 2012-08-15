@@ -15,10 +15,10 @@
 	url = git://drupalcode.org/project/path_access.git
 [submodule "sites/all/modules/calendar"]
 	path = sites/all/modules/calendar
-	url = ssh://git@github.com/Ruva/aperture-calendar.git
+	url = git://github.com/Ruva/aperture-calendar.git
 [submodule "sites/all/modules/date"]
 	path = sites/all/modules/date
-	url = git://drupalcode.org/project/date.git
+	url = git://github.com/Ruva/aperture-date.git
 [submodule "sites/all/modules/views"]
 	path = sites/all/modules/views
 	url = git://drupalcode.org/project/views.git
