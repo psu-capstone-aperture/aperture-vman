@@ -546,23 +546,61 @@ p.small span, div.small span  {
 
 .gen-report {
 	font-family: 'Droid Sans', sans-serif;
-	font-size: 13px;
+	color: #3A3939;
+	font-size: 0.8em;
 	border:none;
 	width: 770px;
 	margin-top:35px;
 }
 
+.gen-report td:first-child {
+    -moz-border-radius: 7px 0 0 7px;
+    -webkit-border-radius: 7px 0 0 7px;
+    border-radius: 7px 0 0 7px;
+}
+
+.gen-report td:last-child {
+    -moz-border-radius: 0 7px 7px 0;
+    -webkit-border-radius: 0 7px 7px 0;
+    border-radius: 0 7px 7px 0;
+}
+
+.gen-report td:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.gen-report tr:nth-child(even) {background: #f6f6f6}
+.gen-report tr:nth-child(odd) {background: rgba(253, 253, 253, 0.64)}
+
+.gen-report tr:hover {
+  background: rgba(253, 253, 253, 0.64);
+  -o-transition: all 0.3s linear; 
+  -webkit-transition: all 0.3s linear; 
+  -moz-transition: all 0.3s linear; 
+  -ms-transition: all 0.3s linear; 
+  transition: all 0.3s linear; 
+}
+
+
 #head-report {
 	font-family: 'Homenaje', sans-serif;
 	text-transform: uppercase;
-	font-size: 18px;
-	color: rgba(155, 155, 155, 0.77);
+	font-size: 1.6em;
+	color: rgba(41, 41, 41, 0.75);
 	letter-spacing: -1px;
-	text-shadow: 0px 1px 1px rgba(159, 159, 160, 0.1);
+	text-shadow: 0px 1px 1px rgba(177, 177, 177, 0.79);
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-	background-color: #F1F1F1;
+	background-color: #EE5F5F;
 	height: 30px;
 }
+
+.gen-report tr {
+	height: 2.4em;
+}
+
+
 
 .report-name-col-left {
 	padding-left:1px;
@@ -577,15 +615,14 @@ p.small span, div.small span  {
 .report-nums-head {
 	padding-left: 8px;
 	width: 15px;
-	border-radius: 5px;
 	font-size: 17px;
-	color:rgba(194, 194, 194, 0.58);
+	color: rgba(104, 5, 5, 0.58);
 }
 
 .report-nums {
 	font-size:12px;
 	padding-left:10px;
-	color:rgba(170, 170, 170, 0.55);
+	color:rgba(214, 203, 203, 0.39);
 }
 
 /* --------- END RUN REPORT PAGE ------------ */

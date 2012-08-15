@@ -299,7 +299,7 @@ td.menu-disabled {
 	font-size:11px;
 	margin-left:10px;
 	vertical-align: middle;
-	margin-top: 1px;
+	margin-top: 0px;
 }
 
 .checkboxText {
