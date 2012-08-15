@@ -1,7 +1,9 @@
 <?php
 function runReport($startDate, $endDate, $isCheckboxSet) {
+	
 	$offset = timeOffsetFromGMTToPST();
 	$userCount = 0;
+	
 	echo "<table class=\"gen-report\" align=\"center\" border=\"0\">
 	<tr id=\"head-report\">
 		<td class=\"report-nums-head\">#</td>
@@ -92,8 +94,8 @@ function convertUnixTimeToHoursMinutes($unixTime) {
 <!-- SELECT START/END DATE FORM -->
 <div class="run-report-wrapper">
 <form name="get_date" action="" method="post" autocomplete="off">
-<input id="from-date" type="text" name="startDate" placeholder="Start Date" />
-<input id="to-date"type="text" name="endDate" placeholder="End Date" />
+<input id="from-date" type="text" name="startDate" placeholder="Start Date" required />
+<input id="to-date"type="text" name="endDate" placeholder="End Date" required />
 <input class="form-submit" type="submit" name="submit" value="GO" />
 <input class="saveToScv" type="checkbox" name="saveToCSV" value="1" /> <div class="checkboxText">Save to .CSV</div>
 </form></div>
@@ -104,15 +106,14 @@ function convertUnixTimeToHoursMinutes($unixTime) {
 if (isset($_POST["submit"])) {
 	if (!$_POST['startDate']) {
 		echo "<div class=\"error-label-start\"><span style=\"color:red\">*</span>Start date required</div>";
-	}
+	} 
 	if (!$_POST['endDate']) {
 		echo "<div class=\"error-label-end\"><span style=\"color:red\">*</span>End date required</div>";
-	}
+	} 
+	
 	// check status of checkbox
 	$isCheckboxSet = (isset($_POST["saveToCSV"])) ? 1 : 0;
-
-	if ($_POST['startDate'] AND $_POST['endDate']) {
-
+	if ($_POST['startDate'] AND $_POST['endDate']) {	
 		runReport($_POST["startDate"], $_POST["endDate"], $isCheckboxSet);
 	}
 }
@@ -123,4 +124,9 @@ if (isset($_POST["submit"])) {
 <?php
 /* --- INCLUDE SCRIPTS FOR DATE PICKER --- */
 include ("sites/all/themes/aperture/datepicker/loads_scripts.php");
+?>
+
+<?php
+/* --- INCLUDE SCRIPTS FOR FORM PERSISTANCE --- */
+include ("sites/all/themes/aperture/js/save-form-fields/form-persistance.php");
 ?>
