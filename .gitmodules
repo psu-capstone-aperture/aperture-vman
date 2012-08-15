@@ -34,15 +34,9 @@
 [submodule "sites/all/modules/entity"]
 	path = sites/all/modules/entity
 	url = git://drupalcode.org/project/entity.git
-[submodule "sites/all/modules/node_export"]
-	path = sites/all/modules/node_export
-	url = git://drupalcode.org/project/node_export.git
 [submodule "sites/all/modules/uuid"]
 	path = sites/all/modules/uuid
 	url = git://drupalcode.org/project/uuid.git
-[submodule "sites/all/modules/features"]
-	path = sites/all/modules/features
-	url = git://drupalcode.org/project/features.git
 [submodule "sites/all/modules/cck_select_other"]
 	path = sites/all/modules/cck_select_other
 	url = git://drupalcode.org/project/cck_select_other.git
