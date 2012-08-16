@@ -59,7 +59,7 @@
 }
 
 .form-item .description { /* The descriptive help text (separate from the label) */
-  font-size: 0.85em;
+  font-size: 12px;
   display:none;
 }
 
@@ -222,7 +222,7 @@ td.menu-disabled {
 	font-size: 15px; */
 
 #edit-name, #edit-pass, #edit-mail, #edit-field-first-name-und-0-value, #edit-field-last-name-und-0-value, #edit-field-phone-number-und-0-value, 
-#edit-field-birthday-und-0-value, #edit-field-current-employer-und-0-value, #edit-field-emergency-contact-und-0-value, #edit-field-emergency-number-und-0-value, #edit-field-language-und-0-value{
+#edit-field-birthday-und-0-value, #edit-field-current-employer-und-0-value, #edit-field-emergency-contact-und-0-value, #edit-field-emergency-number-und-0-value, #edit-field-language-und-0-value, #edit-current-pass {
 	font-family: 'Droid Sans', sans-serif;
 	padding: 7px;
 	width: 200px;
@@ -389,3 +389,84 @@ td.menu-disabled {
         font-weight:normal;
 }
 
+/* Current password in Profile Edit page */
+.password-strength-title {
+	font-family: 'Droid Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #888;
+	font-weight:normal;
+}
+
+/* New password in profile edit page */
+#edit-pass-pass1, #edit-pass-pass2 {
+	position: relative;
+	left: 10px;
+	font-family: 'Droid Sans', sans-serif;
+	padding: 7px;
+	width: 200px;
+	font-size: 12px;
+	background: #F9F9F9;
+	border: 0;
+	color: #777;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.form-item-pass {
+	padding-bottom: 10px;
+}
+
+.password-suggestions {
+	font-family: 'Droid Sans', sans-serif;
+	color: #888;
+	border-top: 0px solid #E1E1E1;
+	border-left: 0px solid #E1E1E1;
+	border-bottom: 0px solid #F0F0F0;
+	border-right: 0px solid #F0F0F0;
+	margin-left: 100px;
+}
+
+.password-parent {
+	width: 904px;
+}
+
+.password-strength {
+	position:relative;
+}
+
+.confirm-parent {
+	width: 607px;
+}
+/* Profile Picture in User Profile Edit */
+#edit-picture {
+	border: 1px;
+	font-family: 'Droid Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: rgb(136, 136, 136);
+	display: inline;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+}
+
+/* Private Message and Timezone in User Profile Edit */
+#edit-privatemsg, #edit-timezone {
+	border: 1px;
+	font-family: 'Droid Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: rgb(136, 136, 136);
+	display: inline;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+}
