@@ -10,12 +10,15 @@
 [submodule "sites/all/modules/token"]
 	path = sites/all/modules/token
 	url = git://drupalcode.org/project/token.git
+[submodule "sites/all/modules/path_access"]
+	path = sites/all/modules/path_access
+	url = git://drupalcode.org/project/path_access.git
 [submodule "sites/all/modules/calendar"]
 	path = sites/all/modules/calendar
-	url = git://drupalcode.org/project/calendar.git
+	url = git://github.com/Ruva/aperture-calendar.git
 [submodule "sites/all/modules/date"]
 	path = sites/all/modules/date
-	url = git://drupalcode.org/project/date.git
+	url = git://github.com/Ruva/aperture-date.git
 [submodule "sites/all/modules/views"]
 	path = sites/all/modules/views
 	url = git://drupalcode.org/project/views.git
@@ -31,6 +34,21 @@
 [submodule "sites/all/modules/entity"]
 	path = sites/all/modules/entity
 	url = git://drupalcode.org/project/entity.git
+[submodule "sites/all/modules/uuid"]
+	path = sites/all/modules/uuid
+	url = git://drupalcode.org/project/uuid.git
+[submodule "sites/all/modules/cck_select_other"]
+	path = sites/all/modules/cck_select_other
+	url = git://drupalcode.org/project/cck_select_other.git
 [submodule "sites/all/modules/privatemsg"]
 	path = sites/all/modules/privatemsg
 	url = git://drupalcode.org/project/privatemsg.git
+[submodule "sites/all/modules/login_destination"]
+	path = sites/all/modules/login_destination
+	url = git://drupalcode.org/project/login_destination.git
+[submodule "sites/all/modules/recaptcha"]
+	path = sites/all/modules/recaptcha
+	url = git://drupalcode.org/project/recaptcha.git
+[submodule "sites/all/modules/captcha"]
+	path = sites/all/modules/captcha
+	url = git://drupalcode.org/project/captcha.git
