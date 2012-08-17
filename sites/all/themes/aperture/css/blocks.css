@@ -54,8 +54,10 @@ h2.block-title { /* Block title */
 	font-size: 15px;
 	font-weight: normal;
 	position: absolute;
-	padding-left: 430px;
-	padding-top: 105px;
+}
+
+#block-block-3 h2 {
+	display: none;
 }
 
 /* Log-in Block on Register page */
@@ -64,6 +66,10 @@ h2.block-title { /* Block title */
 	font-size: 15px;
 	font-weight: normal;
 	padding-left: 10px; 
+}
+
+#block-block-4 h2 {
+	display: none;
 }
 
 #block-blog-recent { /* "Recent blog posts" block */
