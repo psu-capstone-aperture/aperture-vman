@@ -1,16 +1,19 @@
 <?php
 function runReport($startDate, $endDate, $isCheckboxSet) {
-	
+
 	$offset = timeOffsetFromGMTToPST();
 	$userCount = 0;
-	
-	echo "<table class=\"gen-report\" align=\"center\" border=\"0\">
+
+	// show report only if we don't save to .csv
+	if ($isCheckboxSet == 0) {
+		echo "<table class=\"gen-report\" align=\"center\" border=\"0\">
 	<tr id=\"head-report\">
 		<td class=\"report-nums-head\">#</td>
 		<td class=\"report-name-col-left\">Name</td>
 		<td>Username</td>
 		<td  class=\"report-name-col-right\">Total Time</td>
 	</tr> ";
+	}
 
 	/* RETREIVE DATA FROM DATABASE SORTED BY LASTNAME */
 	$calEvents = db_query('SELECT u.name, u.uid, first.field_first_name_value, first.entity_id, last.field_last_name_value, last.entity_id, n.nid, n.type, n.uid, fd.entity_id, fd.field_event_date_value, fd.field_event_date_value2
@@ -53,20 +56,24 @@ ORDER BY first.field_first_name_value');
 		$firstName = $arrayWithData['firstName'];
 		$lastName = $arrayWithData['lastName'];
 		$totalTime = convertUnixTimeToHoursMinutes($arrayWithData['volHours']);
+
 		//create cells and display data
-		echo "<tr><td class=\"report-nums\">$userCount</td><td class=\"report-name-col-left\">$firstName $lastName</td><td>$userName</td><td>$totalTime</td></tr>";
-		if ($isCheckboxSet == 1) {
+		if ($isCheckboxSet == 0) {
+			echo "<tr><td class=\"report-nums\">$userCount</td><td class=\"report-name-col-left\">$firstName $lastName</td><td>$userName</td><td>$totalTime</td></tr>";
+		} else {
 			#save data into 2d array
 			$saveToCSVArray = array($firstName, $lastName, $userName, $totalTime);
 			array_push($saveToCSVCollection, $saveToCSVArray);
 		}
 	}
-	echo "</table>";
-	echo "<div class=\"small\"><span>*</span> the report is based on the calendar data</div>";
 
-	if ($isCheckboxSet == 1) {
+	if ($isCheckboxSet == 0) {
+		echo "</table>";
+		echo "<div class=\"small\"><span>*</span> the report is based on the calendar data</div>";
+	} else {
 		exportToCSV($saveToCSVCollection);
 		include ("download-report.php");
+		
 	}
 
 }
@@ -106,14 +113,14 @@ function convertUnixTimeToHoursMinutes($unixTime) {
 if (isset($_POST["submit"])) {
 	if (!$_POST['startDate']) {
 		echo "<div class=\"error-label-start\"><span style=\"color:red\">*</span>Start date required</div>";
-	} 
+	}
 	if (!$_POST['endDate']) {
 		echo "<div class=\"error-label-end\"><span style=\"color:red\">*</span>End date required</div>";
-	} 
-	
+	}
+
 	// check status of checkbox
 	$isCheckboxSet = (isset($_POST["saveToCSV"])) ? 1 : 0;
-	if ($_POST['startDate'] AND $_POST['endDate']) {	
+	if ($_POST['startDate'] AND $_POST['endDate']) {
 		runReport($_POST["startDate"], $_POST["endDate"], $isCheckboxSet);
 	}
 }

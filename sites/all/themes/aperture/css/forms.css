@@ -389,3 +389,32 @@ td.menu-disabled {
         font-weight:normal;
 }
 
+
+
+/* -------- REGISTER ACCOUNT LINK ----------  */
+.register-account {
+	text-transform: uppercase;
+	position: absolute;
+	left: 428px;
+	font-size: 10px;
+	margin-top:100px;
+}
+.register-account a {
+	color: #CFCFCF;
+	-o-transition: all 0.3s linear; 
+  	-webkit-transition: all 0.3s linear; 
+  	-moz-transition: all 0.3s linear; 
+  	-ms-transition: all 0.3s linear; 
+  	transition: all 0.3s linear; 
+}
+
+.register-account a:hover {
+	color: #ADABAB;
+	-o-transition: all 0.3s linear; 
+  	-webkit-transition: all 0.3s linear; 
+  	-moz-transition: all 0.3s linear; 
+  	-ms-transition: all 0.3s linear; 
+  	transition: all 0.3s linear; 
+}
+
+/* -------- END REGISTER ACCOUNT LINK ----------  */
