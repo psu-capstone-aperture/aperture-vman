@@ -120,7 +120,9 @@ function getNotification() {
     
     //$result = db_query("SELECT n.nid FROM {node} n WHERE n.uid = 4 AND n.type = 'event'");
     // Query for getting today's events
-    $q1 =  "SELECT n.title, d.field_event_date_value, d.field_event_date_value2";
+    $q1 =  "SELECT n.title,";
+    $q1 .= "  LOWER(DATE_FORMAT(d.field_event_date_value, '%l:%i%p')) as start,";
+    $q1 .= "  LOWER(DATE_FORMAT(d.field_event_date_value2, '%l:%i%p')) as end";
     $q1 .= " FROM node n";
     $q1 .= "  INNER JOIN field_data_field_event_date d";
     $q1 .= "  ON n.nid = d.entity_id";
@@ -129,7 +131,10 @@ function getNotification() {
     $q1 .= " AND d.field_event_date_value < DATE_ADD(NOW(), INTERVAL 1 DAY)";
     
     // Query for getting tomorrow's events
-    $q2 =  "SELECT n.title, d.field_event_date_value, d.field_event_date_value2";
+    $q2 =  "SELECT n.title,";
+    $q2 .= "  DATE_FORMAT(d.field_event_date_value, '%m/%d/%y') as date,";
+    $q2 .= "  LOWER(DATE_FORMAT(d.field_event_date_value, '%l:%i%p')) as start,";
+    $q2 .= "  LOWER(DATE_FORMAT(d.field_event_date_value2, '%l:%i%p')) as end"; 
     $q2 .= " FROM node n";
     $q2 .= "  INNER JOIN field_data_field_event_date d";
     $q2 .= "  ON n.nid = d.entity_id";
@@ -138,23 +143,17 @@ function getNotification() {
     $q2 .= "  AND d.field_event_date_value < DATE_ADD(NOW(), INTERVAL 2 DAY)";
      
     // Query for getting the day after tomorrow's events
-    $q3 =  "SELECT n.title, d.field_event_date_value, d.field_event_date_value2";
+    $q3 =  "SELECT n.title,";
+    $q3 .= "  DATE_FORMAT(d.field_event_date_value, '%m/%d/%y') as date,";
+    $q3 .= "  LOWER(DATE_FORMAT(d.field_event_date_value, '%l:%i%p')) as start,";
+    $q3 .= "  LOWER(DATE_FORMAT(d.field_event_date_value2, '%l:%i%p')) as end";
     $q3 .= " FROM node n";
     $q3 .= "  INNER JOIN field_data_field_event_date d";
     $q3 .= "  ON n.nid = d.entity_id";
     $q3 .= " WHERE n.uid = $user->uid";
     $q3 .= "  AND d.field_event_date_value > DATE_ADD(NOW(), INTERVAL 2 DAY)";
     $q3 .= "  AND d.field_event_date_value < DATE_ADD(NOW(), INTERVAL 3 DAY)";
-    
-    $result = db_query($q3); ?>
-    <p>count: <?php echo $result->rowCount(); ?></p>
-    <ul>
-    <?php
-    while ($record = $result->fetchAssoc()) {
-        echo "<li>" . $record["title"]  . "</li>";
-    }
     ?>
-    </ul> 
     <div class="main-box">
         <h1>Notification Center</h1>
         <div class="sub-header">
@@ -162,15 +161,11 @@ function getNotification() {
             <h2>today</h2>
             <div class="content">
                 <ul class="list-icon">
-                    <li>
-                        First To-Do
-                    </li>
-                    <li>
-                        Second To-Do
-                    </li>
-                    <li>
-                        Third To-Do
-                    </li>
+                <?php
+                $result = db_query($q1);
+                while ($record = $result->fetchAssoc()) { ?>
+                    <li><?php echo $record["title"]; ?> Today <?php echo $record["start"]; ?> to <?php echo $record["end"]; ?> </li>
+                <?php } ?>
                 </ul>
             </div>
             <!-- END 1st BLOCK -->
@@ -179,15 +174,11 @@ function getNotification() {
             <h2>tomorrow</h2>
             <div class="content">
                 <ul class="list-icon">
-                    <li>
-                        First To-Do
-                    </li>
-                    <li>
-                        Second To-Do
-                    </li>
-                    <li>
-                        Third To-Do
-                    </li>
+                <?php
+                $result = db_query($q2);
+                while ($record = $result->fetchAssoc()) { ?>
+                    <li><?php echo $record["title"]; ?> <?php echo $record["date"]; ?> <?php echo $record["start"]; ?> to <?php echo $record["end"]; ?> </li>
+                <?php } ?>
                 </ul>
             </div>
             <!-- END 2nd BLOCK -->
@@ -196,15 +187,11 @@ function getNotification() {
             <h2>day after tomorrow</h2>
             <div class="content">
                 <ul class="list-icon">
-                    <li>
-                        First To-Do
-                    </li>
-                    <li>
-                        Second To-Do
-                    </li>
-                    <li>
-                        Third To-Do
-                    </li>
+                <?php
+                $result = db_query($q3);
+                while ($record = $result->fetchAssoc()) { ?>
+                    <li><?php echo $record["title"]; ?> <?php echo $record["date"]; ?> <?php echo $record["start"]; ?> to <?php echo $record["end"]; ?> </li>
+                <?php } ?>
                 </ul>
             </div>
             <!-- END 3nd BLOCK -->
