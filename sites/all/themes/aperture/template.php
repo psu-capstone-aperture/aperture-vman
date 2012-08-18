@@ -117,7 +117,44 @@ function getNotification() {
     if ($image) {
         $imageURL = file_create_url($image);
     }
+    
+    //$result = db_query("SELECT n.nid FROM {node} n WHERE n.uid = 4 AND n.type = 'event'");
+    // Query for getting today's events
+    $q1 =  "SELECT n.title, d.field_event_date_value, d.field_event_date_value2";
+    $q1 .= " FROM node n";
+    $q1 .= "  INNER JOIN field_data_field_event_date d";
+    $q1 .= "  ON n.nid = d.entity_id";
+    $q1 .= " WHERE n.uid = $user->uid";
+    $q1 .= " AND d.field_event_date_value > NOW()";
+    $q1 .= " AND d.field_event_date_value < DATE_ADD(NOW(), INTERVAL 1 DAY)";
+    
+    // Query for getting tomorrow's events
+    $q2 =  "SELECT n.title, d.field_event_date_value, d.field_event_date_value2";
+    $q2 .= " FROM node n";
+    $q2 .= "  INNER JOIN field_data_field_event_date d";
+    $q2 .= "  ON n.nid = d.entity_id";
+    $q2 .= " WHERE n.uid = $user->uid";
+    $q2 .= "  AND d.field_event_date_value > DATE_ADD(NOW(), INTERVAL 1 DAY)";
+    $q2 .= "  AND d.field_event_date_value < DATE_ADD(NOW(), INTERVAL 2 DAY)";
+     
+    // Query for getting the day after tomorrow's events
+    $q3 =  "SELECT n.title, d.field_event_date_value, d.field_event_date_value2";
+    $q3 .= " FROM node n";
+    $q3 .= "  INNER JOIN field_data_field_event_date d";
+    $q3 .= "  ON n.nid = d.entity_id";
+    $q3 .= " WHERE n.uid = $user->uid";
+    $q3 .= "  AND d.field_event_date_value > DATE_ADD(NOW(), INTERVAL 2 DAY)";
+    $q3 .= "  AND d.field_event_date_value < DATE_ADD(NOW(), INTERVAL 3 DAY)";
+    
+    $result = db_query($q3); ?>
+    <p>count: <?php echo $result->rowCount(); ?></p>
+    <ul>
+    <?php
+    while ($record = $result->fetchAssoc()) {
+        echo "<li>" . $record["title"]  . "</li>";
+    }
     ?>
+    </ul> 
     <div class="main-box">
         <h1>Notification Center</h1>
         <div class="sub-header">
