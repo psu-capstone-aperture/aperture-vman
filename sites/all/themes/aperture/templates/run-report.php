@@ -126,12 +126,16 @@ if (isset($_POST["submit"])) {
 }
 ?>
 
+<!-- added spacing -->
 <div style="height: 5px;"></div>
+
+
 
 <?php
 /* --- INCLUDE SCRIPTS FOR DATE PICKER --- */
 include ("sites/all/themes/aperture/datepicker/loads_scripts.php");
 ?>
+
 
 <?php
 /* --- INCLUDE SCRIPTS FOR FORM PERSISTANCE --- */

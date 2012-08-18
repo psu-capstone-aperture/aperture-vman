@@ -48,14 +48,6 @@ h2.block-title { /* Block title */
 	padding-left: 30px;
 }
 
-/* Register Block on Login page */
-#block-block-3 p {
-	font-family: 'Droid Sans', sans-serif;
-	font-size: 15px;
-	font-weight: normal;
-	position: absolute;
-}
-
 #block-block-3 h2 {
 	display: none;
 }
