@@ -153,8 +153,6 @@ function getNotification() {
     $q3 .= " WHERE n.uid = $user->uid";
     $q3 .= "  AND d.field_event_date_value > DATE_ADD(NOW(), INTERVAL 2 DAY)";
     $q3 .= "  AND d.field_event_date_value < DATE_ADD(NOW(), INTERVAL 3 DAY)";
-    
-    echo "<p>" . getTimeOffset() . "</p>";
     ?>
     <div class="main-box">
         <h1>Notification Center</h1>
