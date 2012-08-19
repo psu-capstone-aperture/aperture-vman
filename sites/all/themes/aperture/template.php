@@ -228,6 +228,20 @@ function createHello() {?>
 <?php }
 
 /**
+ * PHP function to get the offset from GMT to America/Los_Angeles. This 
+ * function will automatically determine whether it is -7 or -8 hours.
+ * 
+ * @return Returns the timezone offset as an int.
+ */
+function getTimeOffset() {
+    $userTimezone = new DateTimeZone("America/Los_Angeles");
+    $gmtTimezone = new DateTimeZone("GMT");
+    $myDateTime = new DateTime("2009-03-21 13:14", $gmtTimezone);
+    
+    return $userTimeZone->getOffset($myDateTime);
+}
+
+/**
  * Override or insert variables into the maintenance page template.
  *
  * @param $variables
