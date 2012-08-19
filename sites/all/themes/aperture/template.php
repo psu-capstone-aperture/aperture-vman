@@ -110,7 +110,8 @@ function getNotification() {
     $pref =  db_query("SELECT n.field_athlete_group_preference_value FROM {field_data_field_athlete_group_preference} n WHERE n.entity_id = $user->uid")->fetchField();
     $image = db_query("SELECT n.uri FROM {file_managed} n WHERE n.fid = $user->picture")->fetchField();
     $imageURL = "http://codingroup.com/aperture/admin/images/no-image.png";
-
+    $timeOffset = getTimeOffset();
+    
     if (!$pref) {
         $pref = "none";
     }
@@ -118,11 +119,10 @@ function getNotification() {
         $imageURL = file_create_url($image);
     }
     
-    //$result = db_query("SELECT n.nid FROM {node} n WHERE n.uid = 4 AND n.type = 'event'");
     // Query for getting today's events
     $q1 =  "SELECT n.title,";
-    $q1 .= "  LOWER(DATE_FORMAT(d.field_event_date_value, '%l:%i%p')) as start,";
-    $q1 .= "  LOWER(DATE_FORMAT(d.field_event_date_value2, '%l:%i%p')) as end";
+    $q1 .= "  LOWER(DATE_FORMAT(DATE_ADD(d.field_event_date_value, INTERVAL $timeOffset HOUR), '%l:%i%p')) as start,";
+    $q1 .= "  LOWER(DATE_FORMAT(DATE_ADD(d.field_event_date_value2, INTERVAL $timeOffset HOUR), '%l:%i%p')) as end";
     $q1 .= " FROM node n";
     $q1 .= "  INNER JOIN field_data_field_event_date d";
     $q1 .= "  ON n.nid = d.entity_id";
@@ -132,9 +132,9 @@ function getNotification() {
     
     // Query for getting tomorrow's events
     $q2 =  "SELECT n.title,";
-    $q2 .= "  DATE_FORMAT(d.field_event_date_value, '%m/%d/%y') as date,";
-    $q2 .= "  LOWER(DATE_FORMAT(d.field_event_date_value, '%l:%i%p')) as start,";
-    $q2 .= "  LOWER(DATE_FORMAT(d.field_event_date_value2, '%l:%i%p')) as end"; 
+    $q2 .= "  DATE_FORMAT(DATE_ADD(d.field_event_date_value, INTERVAL $timeOffset HOUR), '%m/%d/%y') as date,";
+    $q2 .= "  LOWER(DATE_FORMAT(DATE_ADD(d.field_event_date_value, INTERVAL $timeOffset HOUR), '%l:%i%p')) as start,";
+    $q2 .= "  LOWER(DATE_FORMAT(DATE_ADD(d.field_event_date_value2, INTERVAL $timeOffset HOUR), '%l:%i%p')) as end"; 
     $q2 .= " FROM node n";
     $q2 .= "  INNER JOIN field_data_field_event_date d";
     $q2 .= "  ON n.nid = d.entity_id";
@@ -144,15 +144,17 @@ function getNotification() {
      
     // Query for getting the day after tomorrow's events
     $q3 =  "SELECT n.title,";
-    $q3 .= "  DATE_FORMAT(d.field_event_date_value, '%m/%d/%y') as date,";
-    $q3 .= "  LOWER(DATE_FORMAT(d.field_event_date_value, '%l:%i%p')) as start,";
-    $q3 .= "  LOWER(DATE_FORMAT(d.field_event_date_value2, '%l:%i%p')) as end";
+    $q3 .= "  DATE_FORMAT(DATE_ADD(d.field_event_date_value, INTERVAL $timeOffset HOUR), '%m/%d/%y') as date,";
+    $q3 .= "  LOWER(DATE_FORMAT(DATE_ADD(d.field_event_date_value, INTERVAL $timeOffset HOUR), '%l:%i%p')) as start,";
+    $q3 .= "  LOWER(DATE_FORMAT(DATE_ADD(d.field_event_date_value2, INTERVAL $timeOffset HOUR), '%l:%i%p')) as end";
     $q3 .= " FROM node n";
     $q3 .= "  INNER JOIN field_data_field_event_date d";
     $q3 .= "  ON n.nid = d.entity_id";
     $q3 .= " WHERE n.uid = $user->uid";
     $q3 .= "  AND d.field_event_date_value > DATE_ADD(NOW(), INTERVAL 2 DAY)";
     $q3 .= "  AND d.field_event_date_value < DATE_ADD(NOW(), INTERVAL 3 DAY)";
+    
+    echo "<p>" . getTimeOffset() . "</p>";
     ?>
     <div class="main-box">
         <h1>Notification Center</h1>
@@ -238,7 +240,7 @@ function getTimeOffset() {
     $gmtTimezone = new DateTimeZone("GMT");
     $myDateTime = new DateTime("2009-03-21 13:14", $gmtTimezone);
     
-    return $userTimeZone->getOffset($myDateTime);
+    return ($userTimezone->getOffset($myDateTime) / 3600);
 }
 
 /**
