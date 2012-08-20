@@ -222,7 +222,8 @@ td.menu-disabled {
 	font-size: 15px; */
 
 #edit-name, #edit-pass, #edit-mail, #edit-field-first-name-und-0-value, #edit-field-last-name-und-0-value, #edit-field-phone-number-und-0-value, 
-#edit-field-birthday-und-0-value, #edit-field-current-employer-und-0-value, #edit-field-emergency-contact-und-0-value, #edit-field-emergency-number-und-0-value, #edit-field-language-und-0-value, #edit-current-pass, #edit-title {
+#edit-field-birthday-und-0-value, #edit-field-current-employer-und-0-value, #edit-field-emergency-contact-und-0-value, #edit-field-emergency-number-und-0-value, 
+#edit-field-language-und-0-value, #edit-current-pass, #edit-title, #edit-subject {
 	font-family: 'Droid Sans', sans-serif;
 	padding: 7px;
 	width: 200px;
@@ -499,4 +500,56 @@ td.menu-disabled {
 
 div.form-actions {
 	margin-top: .3em;
+}
+
+
+
+/* -------- PASSWORD REMINDER FORM ----------  */
+
+.page-user-password #edit-submit {
+	margin: 10px 0px 0px 0px;	
+	left: 495px;
+}
+
+
+
+
+/* -------- VOLUNTEER FEEDBACK PAGE ----------  */
+.page-contact .form-item-message label[for=edit-message] {
+    
+    position: relative;
+    top:58px;
+}
+
+.page-contact .form-textarea-wrapper {
+	height:80px;
+	margin-left:426px;
+}
+
+.page-contact .form-textarea-wrapper textarea {
+	width: 350px;	
+}
+
+.page-contact .form-item label.option {
+	margin-right: 372px;
+}
+
+.page-contact #edit-submit {
+	left:80px;
+	top:-20px;
+}
+
+.page-contact .form-actions 
+{
+	margin: 0;
+}
+
+
+.page-contact .form-item-mail, .page-contact .form-item-name {
+	display:none;
+}
+
+.page-contact .form-item-message {
+	margin-top: 0px;
+	
 }

@@ -737,8 +737,8 @@ div.error,
 .error {
   color: #8c2e0b;
 }
-div.error,
-table tr.error {
+
+div.error, table tr.error {
   background-color: #E66969;
   border-color: #E41414;
   color: #5C2828;
@@ -747,7 +747,16 @@ table tr.error {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  background-image:none;
 }
+
+div.error a {
+	color: #4B5661;
+}
+div.error a:hover {
+	color: #24313D;
+}
+
 div.error p.error {
   color: #333;
 }
