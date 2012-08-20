@@ -500,3 +500,12 @@ td.menu-disabled {
 div.form-actions {
 	margin-top: .3em;
 }
+
+
+
+/* -------- PASSWORD REMINDER FORM ----------  */
+
+.page-user-password #edit-submit {
+	margin: 10px 0px 0px 0px;	
+	left: 495px;
+}
