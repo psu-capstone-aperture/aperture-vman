@@ -222,13 +222,13 @@ td.menu-disabled {
 	font-size: 15px; */
 
 #edit-name, #edit-pass, #edit-mail, #edit-field-first-name-und-0-value, #edit-field-last-name-und-0-value, #edit-field-phone-number-und-0-value, 
-#edit-field-birthday-und-0-value, #edit-field-current-employer-und-0-value, #edit-field-emergency-contact-und-0-value, #edit-field-emergency-number-und-0-value, #edit-field-language-und-0-value, #edit-current-pass {
+#edit-field-birthday-und-0-value, #edit-field-current-employer-und-0-value, #edit-field-emergency-contact-und-0-value, #edit-field-emergency-number-und-0-value, #edit-field-language-und-0-value, #edit-current-pass, #edit-title {
 	font-family: 'Droid Sans', sans-serif;
 	padding: 7px;
 	width: 200px;
 	font-size: 12px;
 	margin: 0px 0px 0x 2px;
-	background: #F9F9F9;
+	background: rgb(253, 253, 253);
 	border: 0;
 	color: #777;
 	border-top: 1px solid #E1E1E1;
@@ -496,9 +496,7 @@ td.menu-disabled {
   	transition: all 0.3s linear; 
 }
 
-/* -------- END REGISTER ACCOUNT LINK ----------  */
 
-.form-actions {
-	margin-top: .5em;
-	margin-bottom: .3em;
+div.form-actions {
+	margin-top: .3em;
 }

@@ -637,7 +637,7 @@ textarea {
 	font-size: 12px;
 	color: #666;
 	overflow: auto;
-	background: #F9F9F9;
+	background: #FDFDFD;
 	border: 0;
 	border-top: 1px solid #E1E1E1;
 	border-left: 1px solid #E1E1E1;
@@ -789,3 +789,18 @@ div.messages ul li {
 .profile dd {
   margin: 0 0 1em 0.3em;
 }
+
+
+
+
+/* =============================================================================
+   Synonym for drupal is spagetti factory...
+   ========================================================================== */   
+.filter-help {
+	display:none;
+}
+
+.filter-guidelines-plain_text .tips {
+	display:none;
+}
+
