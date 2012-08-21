@@ -33,6 +33,7 @@ body {
 	-moz-box-shadow: 0px 1px 3px #3A3A3A;
 	-webkit-box-shadow: 0px 1px 3px #3A3A3A;
 	box-shadow: 0px 1px 3px #3A3A3A;
+	min-width:1040px;
 }
 
 
