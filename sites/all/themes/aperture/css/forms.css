@@ -74,7 +74,8 @@
 	margin-left: 426px;
 }
 
-.form-submit { /* The submit button */
+.form-submit {
+	 /* The submit button */
 	display: inline-block;
 	position: relative;
 	color: #888;
@@ -817,3 +818,49 @@ div.form-actions {
 
 
 /* -------- CALENDAR, DELETE TASK PAGE ----------  */
+.page-node-delete .confirmation {
+		font-family: 'Droid Sans', sans-serif;
+		text-align:center;
+}
+
+.page-node-delete #edit-submit {
+	margin-left:0px;	
+}
+
+.page-node-delete #edit-submit:hover {
+	color:red;	
+}
+
+.page-node-delete #edit-cancel {
+	/* The cancel button */
+	display: inline-block;
+	position: relative;
+	color: #888;
+	text-shadow: 0 1px 0 rgba(255,255,255, 0.8);
+	text-decoration: none;
+	text-align: center;
+	padding: 2px 12px;
+	font-size: 12px;
+	font-weight: 700;
+	font-family: helvetica, arial, sans-serif;
+	border-radius: 4px;
+	border: 1px solid #bcbcbc;
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+	background-image: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+	background-image: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+	margin-left:10px;
+}
+
+.page-node-delete #edit-cancel:hover{
+	color: #555; 
+}
+
+/* Remove bottom padding */
+.page-node-delete #content {
+	padding-bottom:0px;
+}
+.page-node-delete #edit-actions {
+	margin-top: 10px;
+}
