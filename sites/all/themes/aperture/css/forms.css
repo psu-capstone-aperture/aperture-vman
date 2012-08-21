@@ -87,10 +87,6 @@
 	font-family: helvetica, arial, sans-serif;
 	border-radius: 4px;
 	border: 1px solid #bcbcbc;
-
-	/*-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12);*/
-
 	background-image: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
 	background-image: -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
 	background-image: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
@@ -100,7 +96,7 @@
 
 
 .form-submit:hover {
-	color: #555;
+	color: #555; 
 }
 
 .form-submit:active, .form-submit:active:after, .form-submit:active:before {
@@ -553,3 +549,271 @@ div.form-actions {
 	margin-top: 0px;
 	
 }
+
+
+
+
+
+/* --------  ADD NEW CALENDAR TASK PAGE ----------*/
+
+/* align center date picker and add top padding */
+.page-node-add-event #field-event-date-add-more-wrapper .form-wrapper {
+	border: 0px;
+	margin-left:407px;
+	padding-top: 1.7em;
+}
+
+/*--- date picker block ---*/
+.page-node-add-event #edit-field-event-date-und-0-value {
+	width:370px;	
+}
+
+.page-node-add-event .form-wrapper .fieldset-legend, label[for=edit-field-event-date-und-0-value2] {
+	font-family: 'Droid Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #888;
+	position:absolute;
+	right: 535px;
+	margin-top: 43px;
+}
+
+.page-node-add-event label[for=edit-field-event-date-und-0-value2] {
+	margin-top: 5px;
+}
+
+.page-node-add-event label[for=edit-field-event-date-und-0-value-datepicker-popup-0], 
+.page-node-add-event label[for=edit-field-event-date-und-0-value2-datepicker-popup-0], 
+.page-node-add-event label[for=edit-field-event-date-und-0-value-timeEntry-popup-1], 
+.page-node-add-event label[for=edit-field-event-date-und-0-value2-timeEntry-popup-1] {
+	float:left;
+}
+
+.page-node-add-event select.form-select{
+	margin-right: 410px;
+}
+
+/*style label for group picker*/
+.page-node-add-event label[for=edit-field-group-und]{
+	margin-right: 8px;
+}
+
+/* hide random border */
+.page-node-add-event .form-wrapper #edit-body-und-0-format{
+	display:none;
+}
+
+/* adjust side textarea */
+.page-node-add-event #edit-body-und-0-value {
+	width: 360px;
+	height: 80px;
+	margin-top: 5px	
+}
+
+/* hide "edit summary" link and other unneded labels */
+.page-node-add-event span.field-edit-link, 
+.page-node-add-event label[for=edit-field-event-date-und-0-value-datepicker-popup-0],
+.page-node-add-event label[for=edit-field-event-date-und-0-value-timeEntry-popup-1], 
+.page-node-add-event label[for=edit-field-event-date-und-0-value2-datepicker-popup-0],
+.page-node-add-event label[for=edit-field-event-date-und-0-value2-timeEntry-popup-1]
+{
+	display:none;
+}
+/* align textarea discripton */
+.page-node-add-event label[for=edit-body-und-0-value] {
+	margin-right: 530px;	
+}
+
+/* text field style */
+.page-node-add-event #edit-field-event-date-und-0-value-datepicker-popup-0, 
+.page-node-add-event #edit-field-event-date-und-0-value-timeEntry-popup-1, 
+.page-node-add-event #edit-field-event-date-und-0-value2-datepicker-popup-0, 
+.page-node-add-event #edit-field-event-date-und-0-value2-timeEntry-popup-1 {
+	font-family: 'Droid Sans', sans-serif;
+	padding: 7px;
+	font-size: 13px;
+	margin: 0px 0px 0x 2px;
+	background: rgb(253, 253, 253);
+	border: 0;
+	color: #777;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.page-node-add-event #edit-field-event-date-und-0-value2 {
+		padding: 0px 10px 0px 10px;
+}
+
+
+.page-node-add-event label[for=edit-body-und-0-value] {
+	position: relative;
+	top: 56px;
+}
+
+
+.page-node-add-event .form-submit {
+	float:right;
+	margin-right: 165px;	
+	margin-top:7px;
+}
+
+/* remove spacing below the textarea */
+.page-node-add-event .form-textarea-wrapper {
+	height: 80px;
+}
+
+
+
+/* SUPER ADMIN VIEW FIX */
+/* align center date picker and add top padding */
+.page-node-add-event.overlay #field-event-date-add-more-wrapper .form-wrapper {
+	border: 1px solid #CCC;
+	margin-left:0px;
+}
+
+.page-node-add-event.overlay .form-wrapper .fieldset-legend, label[for="edit-field-event-date-und-0-value2"] {
+	display:none;
+}
+
+.page-node-add-event.overlay label[for="edit-body-und-0-value"] {
+	top:0px;	
+}
+
+.page-node-add-event.overlay .form-submit {
+	float:left;
+}
+
+
+
+
+
+/* -------- CALENDAR, EDIT TASK PAGE ----------  */
+
+/* align center date picker and add top padding */
+.page-node-edit #field-event-date-add-more-wrapper .form-wrapper {
+	border: 0px;
+	margin-left:407px;
+	padding-top: 1.7em;
+}
+
+/*--- date picker block ---*/
+.page-node-edit #edit-field-event-date-und-0-value {
+	width:370px;	
+}
+
+.page-node-edit .form-wrapper .fieldset-legend, label[for=edit-field-event-date-und-0-value2] {
+	font-family: 'Droid Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #888;
+	position:absolute;
+	right: 535px;
+	margin-top: 43px;
+}
+
+.page-node-edit label[for=edit-field-event-date-und-0-value2] {
+	margin-top: 5px;
+}
+
+.page-node-edit label[for=edit-field-event-date-und-0-value-datepicker-popup-0], 
+.page-node-edit label[for=edit-field-event-date-und-0-value2-datepicker-popup-0], 
+.page-node-edit label[for=edit-field-event-date-und-0-value-timeEntry-popup-1], 
+.page-node-edit label[for=edit-field-event-date-und-0-value2-timeEntry-popup-1] {
+	float:left;
+}
+
+.page-node-edit select.form-select{
+	margin-right: 410px;
+}
+
+/*style label for group picker*/
+.page-node-edit label[for=edit-field-group-und]{
+	margin-right: 8px;
+}
+
+/* hide random border */
+.page-node-edit .form-wrapper #edit-body-und-0-format{
+	display:none;
+}
+
+/* adjust side textarea */
+.page-node-edit #edit-body-und-0-value {
+	width: 360px;
+	height: 80px;
+	margin-top: 5px	
+}
+
+/* hide "edit summary" link and other unneded labels */
+.page-node-edit span.field-edit-link, 
+.page-node-edit label[for=edit-field-event-date-und-0-value-datepicker-popup-0],
+.page-node-edit label[for=edit-field-event-date-und-0-value-timeEntry-popup-1], 
+.page-node-edit label[for=edit-field-event-date-und-0-value2-datepicker-popup-0],
+.page-node-edit label[for=edit-field-event-date-und-0-value2-timeEntry-popup-1]
+{
+	display:none;
+}
+/* align textarea discripton */
+.page-node-edit label[for=edit-body-und-0-value] {
+	margin-right: 530px;	
+}
+
+/* text field style */
+.page-node-edit #edit-field-event-date-und-0-value-datepicker-popup-0, 
+.page-node-edit #edit-field-event-date-und-0-value-timeEntry-popup-1, 
+.page-node-edit #edit-field-event-date-und-0-value2-datepicker-popup-0, 
+.page-node-edit #edit-field-event-date-und-0-value2-timeEntry-popup-1 {
+	font-family: 'Droid Sans', sans-serif;
+	padding: 7px;
+	font-size: 13px;
+	margin: 0px 0px 0x 2px;
+	background: rgb(253, 253, 253);
+	border: 0;
+	color: #777;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.page-node-edit #edit-field-event-date-und-0-value2 {
+		padding: 0px 10px 0px 10px;
+}
+
+
+.page-node-edit label[for=edit-body-und-0-value] {
+	position: relative;
+	top: 56px;
+}
+
+.page-node-edit .form-submit {
+	float:right;
+	margin-right: 165px;	
+	margin-top:7px;
+}
+
+/* remove spacing below the textarea */
+.page-node-edit .form-textarea-wrapper {
+	height: 80px;
+}
+
+/* adjust submit button*/
+.page-node-edit #edit-submit {
+	margin-left:0px;	
+}
+
+/* adjust delete button*/
+.page-node-edit #edit-delete {
+	margin-right:10px;
+}
+
+
+
+/* -------- CALENDAR, DELETE TASK PAGE ----------  */
