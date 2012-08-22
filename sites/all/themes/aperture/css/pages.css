@@ -643,7 +643,9 @@ p.small span, div.small span  {
 /* --------- USERS PAGE ------------ */
 .page-admin-people .form-wrapper {
 	border: 0px;
-	text-align: center;
+}
+.page-admin-people .container-inline .fieldset-wrapper {
+	margin-left:250px;
 }
 
 .page-admin-people #edit-filters {
@@ -733,4 +735,153 @@ p.small span, div.small span  {
 
 .page-admin-people .action-links,.page-admin-people .container-inline {
 	margin-left: 75px;	
+}
+
+
+/* --- USER EDIT PAGE --- */
+/* advice on page restyle :) remove standard drupal styling 
+	and start from scratch will be a lot easier.*/
+
+.page-admin-people-create .password-strength {
+	width:14em;
+	position: relative;
+	top: -25px;
+}
+
+.page-admin-people-create #edit-pass-pass1, .page-admin-people-create #edit-pass-pass2 {
+	font-family: 'Droid Sans', sans-serif;
+	padding: 7px;
+	width: 200px;
+	font-size: 12px;
+	margin: 0px 0px 0x 2px;
+	background: rgb(253, 253, 253);
+	border: 0;
+	color: #777;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	float:right;
+	margin-right:47px;
+}	
+
+
+.page-admin-people-create .password-strength-text {
+	text-transform:uppercase;
+	font-size:12px;
+	position:relative;
+	top:2px;
+	margin-left:5px;
+	width:56px;
+}
+
+.page-admin-people-create div.password-confirm {
+	font-family: 'Droid Sans', sans-serif;
+	text-transform:uppercase;
+	font-size: 12px;
+	float: none;
+	margin-top: 0;
+	position: relative;
+	left: 610px;
+	top: 27px;
+}
+
+.page-admin-people-create .password-suggestions.description, .page-admin-people-create .form-item-roles-3 {
+	display:none !important;
+}
+
+.page-admin-people-create #edit-status {
+	text-align: left;
+	margin-left: 426px;
+}
+
+.page-admin-people-create .confirm-parent {
+	width:680px;	
+}
+
+.page-admin-people-create label[for=edit-status], .page-admin-people-create label[for=edit-roles] {
+	position:relative;
+	right: 538px;
+}
+
+.page-admin-people-create .form-item-notify {
+	position: relative;
+	left: 427px;
+	width: 200px;
+}
+
+.page-admin-people-create .form-item-field-know-paste-und-0-select-other-list {
+	position:relative;
+	right: 13px;
+}
+
+.page-admin-people-create label[for=edit-field-know-paste-und-0-select-other-list] .placeholder,
+.page-admin-people-create label[for=edit-field-education-und-0-select-other-list] .placeholder  {
+	font-style:normal;
+	margin-right: 15px;
+}
+
+.page-admin-people-create .form-item-field-education-und-0-select-other-list {
+	margin-left: 345px;
+}
+.page-admin-people-create  .container-inline-date {
+	position: relative;
+	left: 54px;
+	width:320px;
+}
+
+.page-admin-people-create .date-processed {
+	font-size:12px;
+}
+
+.page-admin-people-create #edit-field-know-paste-und-0-select-other-text-input, .page-admin-people-create #edit-field-education-und-0-select-other-text-input {
+	font-family: 'Droid Sans', sans-serif;
+	padding: 7px;
+	width: 200px;
+	font-size: 12px;
+	margin: 0px 0px 0x 2px;
+	background: rgb(253, 253, 253);
+	border: 0;
+	color: #777;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	position: relative;
+	right: 307px;
+}
+
+.page-admin-people-create #edit-field-birthday-und-0-value {
+	width:220px;
+}
+
+.form-item label[for=edit-field-case-study-und-0-value] {
+	display: block;
+	width: 380px;
+	position: relative;
+	top: 70px;
+	left: 40px;
+	text-align: center;	
+}
+
+/* for the textarea align label in the midde*/
+.form-item label[for=edit-field-other-comments-und-0-value],
+.form-item label[for=edit-field-more-on-tutor-und-0-value],
+.form-item label[for=edit-field-skills-and-interests-und-0-value],
+.form-item label[for=edit-field-why-paste-und-0-value],
+.form-item label[for=edit-field-exp-teaching-und-0-value] {
+	position: relative;
+	top: 57px;
+}
+
+/*aling submit button on the "add new user page" */
+.page-admin-people-create #edit-submit {
+	margin: 20px 0px 0px 430px;
+	padding: 7px;
 }
