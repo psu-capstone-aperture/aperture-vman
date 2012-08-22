@@ -719,9 +719,12 @@ p.small span, div.small span  {
 
 .page-admin-people .table-select-processed thead th {
 	border:0px;
+	font-weight: normal;
 }
 
-.page-admin-people .table-select-processed tbody {
+.page-admin-people .table-select-processed tbody, 
+.page-admin-structure-taxonomy .tabledrag-processed tbody {
+	font-family: 'Droid Sans', sans-serif;
 	font-size:13px;
 }
 
@@ -1077,14 +1080,8 @@ p.small span, div.small span  {
 	padding-left: 17px;
 }
 
-.page-admin-structure-taxonomy .action-links {
-	text-align:right;
-	margin-right:5.5em;
-}
-
-.page-admin-structure-taxonomy #taxonomy-overview-terms div {
-	font-family: 'Droid Sans', sans-serif;
-	text-align: center;
+.page-admin-structure-taxonomy .action-links { text-align:right; margin-right:5.5em;}
+.page-admin-structure-taxonomy #taxonomy-overview-terms div {font-size:15px;text-align: center;
 }
 
 /* ADD NEW GROUP PAGE */
@@ -1095,7 +1092,21 @@ p.small span, div.small span  {
 .page-admin-structure-taxonomy-group-add .form-textarea-wrapper {height: inherit;}
 .page-admin-structure-taxonomy-group-add #edit-submit { right:15px;}
 .page-admin-structure-taxonomy-group-add .form-textarea-wrapper textarea { width:65%;}
-.page-admin-structure-taxonomy-group-add label[for=edit-description-value] {
-	position: relative;
-	top: 58px;
-}
+.page-admin-structure-taxonomy-group-add label[for=edit-description-value] { position: relative; top: 58px; }
+.page-admin-structure-taxonomy-group-add #content {padding: 25px 0px 17px 0px;}
+
+
+/* EDIT USER GROUP PAGE */
+.page-taxonomy-term-edit #edit-relations,
+.page-taxonomy-term-edit #edit-description-format { display:none;}
+.page-taxonomy-term-edit .form-item, 
+.page-taxonomy-term-edit .form-actions { margin:0;}
+.page-taxonomy-term-edit .form-textarea-wrapper {height: inherit;}
+.page-taxonomy-term-edit #edit-submit { margin-left: 615px; top:10px;}
+.page-taxonomy-term-edit #edit-delete { top:10px; left: 7px;}
+.page-taxonomy-term-edit .form-textarea-wrapper textarea { width:65%;}
+.page-taxonomy-term-edit label[for=edit-description-value] { position: relative; top: 58px; }
+.page-taxonomy-term-edit #content {padding: 25px 0px 17px 0px;}
+.page-taxonomy-term-edit .confirmation div { text-align:center; font-size:15px;}
+.page-taxonomy-term-edit .confirmation div #edit-submit, 
+.page-taxonomy-term-edit .confirmation div #edit-cancel { margin-left:7px; top:10px}
