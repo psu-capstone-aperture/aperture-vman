@@ -737,6 +737,43 @@ p.small span, div.small span  {
 	margin-left: 75px;	
 }
 
+/* ----- CANCEL USER ACCOUNT OPTION (dropdown option) ------ */
+.page-admin-people .form-item-user-cancel-method {
+	text-align:left;	
+}
+
+.page-admin-people .form-item-user-cancel-method {
+	text-align:left;
+	margin-left: 50px;
+}
+
+.page-admin-people  .form-item-user-cancel-method.form-type-checkbox {
+	margin-left:50px;	
+}
+
+.page-admin-people #edit-user-cancel-confirm {
+	margin-left:50px;
+}
+
+/* align buttons in the center*/
+.page-admin-people  #edit-submit {
+	margin-left: 375px;	
+}
+
+.page-admin-people .confirmation div {
+	color:#f6f6f6;
+}
+
+.page-admin-people #edit-user-cancel-method {
+	text-align:left;
+	margin-left:50px;
+}
+
+.page-admin-people .confirmation .form-submit
+{
+	padding: 6px 12px;
+}
+
 
 /* --- Users | Add User Page --- */
 /* advice on page restyle :) remove standard drupal styling 
