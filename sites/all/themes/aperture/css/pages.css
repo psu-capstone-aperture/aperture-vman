@@ -794,7 +794,8 @@ p.small span, div.small span  {
 }
 
 .page-admin-people-create .password-suggestions.description, .page-admin-people-create .form-item-roles-3,
-.page-user-edit .password-suggestions.description, .page-user-edit .form-item-roles-3 {
+.page-user-edit .password-suggestions.description, .page-user-edit .form-item-roles-3,
+.page-user-edit #edit-overlay-control {
 	display:none !important;
 }
 
