@@ -153,11 +153,7 @@ li a.active {
 	height:40px;
 	z-index:1;
 	position:absolute;
-<<<<<<< HEAD
-	right: 60px;
-=======
-	right: 50px;
->>>>>>> 5f8d46475f2543fec9beb74df5f30f1d83159372
+	right:60px;
 	top:16px;
 	display:block;
 	opacity: 0.8;
