@@ -738,17 +738,19 @@ p.small span, div.small span  {
 }
 
 
-/* --- USER EDIT PAGE --- */
+/* --- Users | Add User Page --- */
 /* advice on page restyle :) remove standard drupal styling 
 	and start from scratch will be a lot easier.*/
 
-.page-admin-people-create .password-strength {
+.page-admin-people-create .password-strength,
+.page-user-edit .password-strength {
 	width:14em;
 	position: relative;
 	top: -25px;
 }
 
-.page-admin-people-create #edit-pass-pass1, .page-admin-people-create #edit-pass-pass2 {
+.page-admin-people-create #edit-pass-pass1, .page-admin-people-create #edit-pass-pass2,
+.page-user-edit #edit-pass-pass1, .page-user-edit #edit-pass-pass2 {
 	font-family: 'Droid Sans', sans-serif;
 	padding: 7px;
 	width: 200px;
@@ -769,7 +771,8 @@ p.small span, div.small span  {
 }	
 
 
-.page-admin-people-create .password-strength-text {
+.page-admin-people-create .password-strength-text,
+.page-user-edit .password-strength-text {
 	text-transform:uppercase;
 	font-size:12px;
 	position:relative;
@@ -778,7 +781,8 @@ p.small span, div.small span  {
 	width:56px;
 }
 
-.page-admin-people-create div.password-confirm {
+.page-admin-people-create div.password-confirm,
+.page-user-edit div.password-confirm {
 	font-family: 'Droid Sans', sans-serif;
 	text-transform:uppercase;
 	font-size: 12px;
@@ -789,55 +793,69 @@ p.small span, div.small span  {
 	top: 27px;
 }
 
-.page-admin-people-create .password-suggestions.description, .page-admin-people-create .form-item-roles-3 {
+.page-admin-people-create .password-suggestions.description, .page-admin-people-create .form-item-roles-3,
+.page-user-edit .password-suggestions.description, .page-user-edit .form-item-roles-3 {
 	display:none !important;
 }
 
-.page-admin-people-create #edit-status {
+.page-admin-people-create #edit-status,
+.page-user-edit #edit-status {
 	text-align: left;
 	margin-left: 426px;
 }
 
-.page-admin-people-create .confirm-parent {
+.page-admin-people-create .confirm-parent,
+.page-user-edit .confirm-parent {
 	width:680px;	
 }
 
-.page-admin-people-create label[for=edit-status], .page-admin-people-create label[for=edit-roles] {
+.page-admin-people-create label[for=edit-status], .page-admin-people-create label[for=edit-roles],
+.page-user-edit label[for=edit-status], .page-user-edit label[for=edit-roles] {
 	position:relative;
 	right: 538px;
 }
 
-.page-admin-people-create .form-item-notify {
+.page-admin-people-create .form-item-notify,
+.page-user-edit .form-item-notify  {
 	position: relative;
 	left: 427px;
 	width: 200px;
 }
 
-.page-admin-people-create .form-item-field-know-paste-und-0-select-other-list {
+.page-admin-people-create .form-item-field-know-paste-und-0-select-other-list,
+.page-user-edit .form-item-field-know-paste-und-0-select-other-list  {
 	position:relative;
 	right: 13px;
 }
 
 .page-admin-people-create label[for=edit-field-know-paste-und-0-select-other-list] .placeholder,
-.page-admin-people-create label[for=edit-field-education-und-0-select-other-list] .placeholder  {
+.page-admin-people-create label[for=edit-field-education-und-0-select-other-list] .placeholder,
+.page-user-edit label[for=edit-field-know-paste-und-0-select-other-list] .placeholder,
+.page-user-edit label[for=edit-field-education-und-0-select-other-list] .placeholder   {
 	font-style:normal;
 	margin-right: 15px;
 }
 
-.page-admin-people-create .form-item-field-education-und-0-select-other-list {
+.page-admin-people-create .form-item-field-education-und-0-select-other-list,
+.page-user-edit .form-item-field-education-und-0-select-other-list {
 	margin-left: 345px;
 }
-.page-admin-people-create  .container-inline-date {
+.page-admin-people-create .container-inline-date,
+.page-user-edit .container-inline-date {
 	position: relative;
 	left: 54px;
 	width:320px;
 }
 
-.page-admin-people-create .date-processed {
+.page-admin-people-create .date-processed,
+.page-user-edit .date-processed {
 	font-size:12px;
 }
 
-.page-admin-people-create #edit-field-know-paste-und-0-select-other-text-input, .page-admin-people-create #edit-field-education-und-0-select-other-text-input {
+.page-admin-people-create #edit-field-know-paste-und-0-select-other-text-input, 
+.page-admin-people-create #edit-field-education-und-0-select-other-text-input,
+.page-user-edit #edit-field-know-paste-und-0-select-other-text-input, 
+.page-user-edit #edit-field-education-und-0-select-other-text-input {
 	font-family: 'Droid Sans', sans-serif;
 	padding: 7px;
 	width: 200px;
@@ -857,7 +875,8 @@ p.small span, div.small span  {
 	right: 307px;
 }
 
-.page-admin-people-create #edit-field-birthday-und-0-value {
+.page-admin-people-create #edit-field-birthday-und-0-value,
+.page-user-edit #edit-field-birthday-und-0-value {
 	width:220px;
 }
 
@@ -884,4 +903,57 @@ p.small span, div.small span  {
 .page-admin-people-create #edit-submit {
 	margin: 20px 0px 0px 430px;
 	padding: 7px;
+}
+
+/*aling submit button on the "add new user page" */
+.page-user-edit #edit-submit {
+	margin: 20px 0px 0px 430px;
+	padding: 7px;
+}
+
+.page-user-edit #edit-cancel {
+	padding: 7px;
+	margin-left: 15px;
+}
+
+
+/* --- USERS | EDIT USER DETAILS PAGE --- */
+
+.page-user-edit #edit-picture {
+	border:0;
+	margin: 20px 0 20px 425px;
+	padding: 7px;
+	width: 370px;
+	background: #FDFDFD;
+	border: 0;
+	color: #777;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.page-user-edit #edit-privatemsg {
+	border:0;
+	margin: 20px 0 20px 425px;
+	padding: 7px;
+	width: auto;
+	background: #FDFDFD;
+	border: 0;
+	color: #777;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.page-user-edit #edit-contact,
+.page-user-edit #edit-timezone {
+	display:none;
 }
