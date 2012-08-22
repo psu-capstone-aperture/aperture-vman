@@ -168,7 +168,7 @@ tr.odd {
 }
 
 div.messages { /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
-  margin:0; /* Drupal core uses "6px 0" margin */
+	margin: 0 50px 0 50px;
 }
 div.messages ul {
   margin-top: 0;
@@ -1014,4 +1014,88 @@ p.small span, div.small span  {
 
 .page-user-cancel .confirmation div {
 	color:#f6f6f6;
+}
+
+
+/* -------- GROUPS PAGE ------------- */
+
+.page-admin-structure-taxonomy .tabledrag-toggle-weight {
+	display:none;
+}
+
+.page-admin-structure-taxonomy .form-wrapper {
+	text-align:center;
+}
+
+.page-admin-structure-taxonomy #edit-submit {
+	margin: 10px 5px 0px 0px;
+}
+
+.page-admin-structure-taxonomy .tableheader-processed {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.page-admin-structure-taxonomy form th {
+	border-bottom:0;
+	text-align:center;
+	width:400px;
+}
+
+.page-admin-structure-taxonomy .table-select-processed tbody tr.even, tr.odd {
+	border: 0px;
+}
+
+.page-admin-structure-taxonomy .tabledrag-processed tbody td:first-child {
+	padding: 5px 0px 0px 5px;
+	-moz-border-radius:7px 0 0 7px;
+	-webkit-border-radius:7px 0 0 7px;
+	border-radius:7px 0 0 7px;
+	text-align:left;
+}
+
+.page-admin-structure-taxonomy .tabledrag-processed tbody td:last-child {
+	padding: 5px 45px 1px 15px;
+	-moz-border-radius: 0 7px 7px 0;
+	-webkit-border-radius: 0 7px 7px 0;
+	border-radius: 0 7px 7px 0;
+}
+
+.page-admin-structure-taxonomy tr.even, tr.odd { border:0;}
+.page-admin-structure-taxonomy .tabledrag-processed tbody tr:nth-child(odd) {background: #f6f6f6;}
+.page-admin-structure-taxonomy .tabledrag-processed tbody tr:nth-child(even) {background: rgba(253, 253, 253, 0.64);}
+.page-admin-structure-taxonomy .tabledrag-processed tbody tr:hover { background: rgba(253, 253, 253, 0.64);}
+
+/*center align header */
+.page-admin-structure-taxonomy form th:first-child { text-align:left; text-transform:uppercase; font-weight:normal; }
+.page-admin-structure-taxonomy form th:last-child { text-align:right; text-transform:uppercase; font-weight:normal;  }
+.page-admin-structure-taxonomy form td:last-child { text-align:right; }
+
+.page-admin-structure-taxonomy ul.action-links li a {
+	background-image: url('../images/add-user.png');
+	background-repeat:no-repeat;
+	padding-left: 17px;
+}
+
+.page-admin-structure-taxonomy .action-links {
+	text-align:right;
+	margin-right:5.5em;
+}
+
+.page-admin-structure-taxonomy #taxonomy-overview-terms div {
+	font-family: 'Droid Sans', sans-serif;
+	text-align: center;
+}
+
+/* ADD NEW GROUP PAGE */
+.page-admin-structure-taxonomy-group-add #edit-relations, 
+.page-admin-structure-taxonomy-group-add #edit-description-format {display:none;}
+.page-admin-structure-taxonomy-group-add .form-item, 
+.page-admin-structure-taxonomy-group-add .form-actions { margin:0;}
+.page-admin-structure-taxonomy-group-add .form-textarea-wrapper {height: inherit;}
+.page-admin-structure-taxonomy-group-add #edit-submit { right:15px;}
+.page-admin-structure-taxonomy-group-add .form-textarea-wrapper textarea { width:65%;}
+.page-admin-structure-taxonomy-group-add label[for=edit-description-value] {
+	position: relative;
+	top: 58px;
 }
