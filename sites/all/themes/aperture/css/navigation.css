@@ -143,3 +143,28 @@ li a.active {
 
 .block-menu-block {
 }
+
+
+#navigation .menu li.last.leaf a {
+	background-image: url('../images/exit.png');
+	background-repeat: no-repeat;
+	font-size: 0px;
+	width: 40px;
+	height:40px;
+	z-index:1;
+	position:absolute;
+	right: 35px;
+	top:14px;
+	display:block;
+}
+
+
+#navigation .menu li.last a:hover {
+	background-color:transparent;
+	background-image: url('../images/exit-hover.png');
+	background-repeat: no-repeat;
+}
+
+.toolbar #navigation .menu li.last.leaf a {
+	top:-9px;	
+}
