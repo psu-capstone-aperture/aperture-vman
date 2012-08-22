@@ -146,14 +146,14 @@ li a.active {
 
 
 #navigation .menu li.last.leaf a {
-	background-image: url('../images/exit.png');
+	background-image: url('../images/logout.png');
 	background-repeat: no-repeat;
 	font-size: 0px;
 	width: 40px;
 	height:40px;
 	z-index:1;
 	position:absolute;
-	right: 35px;
+	right: 50px;
 	top:14px;
 	display:block;
 }
@@ -161,7 +161,7 @@ li a.active {
 
 #navigation .menu li.last a:hover {
 	background-color:transparent;
-	background-image: url('../images/exit-hover.png');
+	background-image: url('../images/logout-hover.png');
 	background-repeat: no-repeat;
 }
 
