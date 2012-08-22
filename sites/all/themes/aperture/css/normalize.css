@@ -769,6 +769,18 @@ div.messages ul li {
   list-style-image: none;
 }
 
+/* Operation completed successfully message*/
+
+div.status, table tr.ok {
+	background-color: #F8FFF0;
+	border:0;
+  	border-color: #E41414;
+  	border: 1px solid #DDDDDD;
+  	-webkit-border-radius: 5px;
+ 	-moz-border-radius: 5px;
+  	border-radius: 5px;
+  	background-image:none;
+}
 
 
 /* =============================================================================
@@ -776,7 +788,7 @@ div.messages ul li {
    ========================================================================== */
    
    
-   .profile {
+.profile {
   clear: both;
   margin: 0 0 0 7px;
 }
