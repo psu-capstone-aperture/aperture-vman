@@ -957,3 +957,23 @@ p.small span, div.small span  {
 .page-user-edit #edit-timezone {
 	display:none;
 }
+
+/* Cancel User Accout Page */
+
+.page-user-cancel .form-item {
+	text-align:left;
+	margin-left: 50px;
+}
+
+.page-user-cancel .form-item.form-type-checkbox {
+	margin-left:50px;	
+}
+
+/* align buttons in the center*/
+.page-user-cancel #edit-submit {
+	margin-left: 375px;	
+}
+
+.page-user-cancel .confirmation div {
+	color:#f6f6f6;
+}

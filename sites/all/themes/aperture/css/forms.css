@@ -831,7 +831,7 @@ div.form-actions {
 	color:red;	
 }
 
-.page-node-delete #edit-cancel {
+.page-node-delete #edit-cancel, .page-user-cancel #edit-cancel {
 	/* The cancel button */
 	display: inline-block;
 	position: relative;
