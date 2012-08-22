@@ -149,13 +149,14 @@ li a.active {
 	background-image: url('../images/logout.png');
 	background-repeat: no-repeat;
 	font-size: 0px;
-	width: 40px;
+	width: 90px;
 	height:40px;
 	z-index:1;
 	position:absolute;
-	right: 50px;
-	top:14px;
+	right: 60px;
+	top:16px;
 	display:block;
+	opacity: 0.8;
 }
 
 
