@@ -705,36 +705,37 @@ div.messages {
 }
 
 div.status {
-  background-image: url(../../misc/message-24-ok.png);
   border-color: #be7;
 }
-div.status,
-.ok {
+
+div.status, .ok {
   color: #234600;
 }
-div.status,
-table tr.ok {
+
+div.status, table tr.ok {
   background-color: #f8fff0;
 }
 
 div.warning {
-  background-image: url(../../misc/message-24-warning.png);
-  border-color: #ed5;
+	border: 1px solid #DDD;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
-div.warning,
-.warning {
-  color: #840;
+
+div.warning, .warning {
+  color: #58422C;;
 }
-div.warning,
-table tr.warning {
+
+div.warning, table tr.warning {
   background-color: #fffce5;
 }
 
 div.error {
  border: 1px solid #fbeed5;
 }
-div.error,
-.error {
+
+div.error, .error {
   color: #8c2e0b;
 }
 
@@ -779,7 +780,6 @@ div.status, table tr.ok {
   	-webkit-border-radius: 5px;
  	-moz-border-radius: 5px;
   	border-radius: 5px;
-  	background-image:none;
 }
 
 

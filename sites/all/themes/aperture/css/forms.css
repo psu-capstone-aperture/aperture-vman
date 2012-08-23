@@ -831,7 +831,7 @@ div.form-actions {
 	color:red;	
 }
 
-.page-node-delete #edit-cancel, .page-user-cancel #edit-cancel {
+#edit-cancel {
 	/* The cancel button */
 	display: inline-block;
 	position: relative;
@@ -850,7 +850,7 @@ div.form-actions {
 	background-image: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
 	background-image: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
 	background-image: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
-	margin-left:10px;
+	margin-left:5px;
 }
 
 .page-node-delete #edit-cancel:hover{

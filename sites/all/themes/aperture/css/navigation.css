@@ -149,13 +149,20 @@ li a.active {
 	background-image: url('../images/logout.png');
 	background-repeat: no-repeat;
 	font-size: 0px;
-	width: 40px;
+	width: 90px;
 	height:40px;
 	z-index:1;
 	position:absolute;
-	right: 50px;
-	top:14px;
+	right:60px;
+	top:16px;
 	display:block;
+	opacity:0.7;
+
+  -o-transition: all 0.3s linear; 
+  -webkit-transition: all 0.3s linear; 
+  -moz-transition: all 0.3s linear; 
+  -ms-transition: all 0.3s linear; 
+  transition: all 0.3s linear; 
 }
 
 
@@ -163,6 +170,12 @@ li a.active {
 	background-color:transparent;
 	background-image: url('../images/logout-hover.png');
 	background-repeat: no-repeat;
+	opacity:1;
+  -o-transition: all 0.3s linear; 
+  -webkit-transition: all 0.3s linear; 
+  -moz-transition: all 0.3s linear; 
+  -ms-transition: all 0.3s linear; 
+  transition: all 0.3s linear; 
 }
 
 .toolbar #navigation .menu li.last.leaf a {
