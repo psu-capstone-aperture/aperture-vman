@@ -548,7 +548,11 @@ div.form-actions {
 
 .page-contact .form-item-message {
 	margin-top: 0px;
-	
+}
+
+.page-contact #edit-message {
+	padding-bottom: 0px;
+	height:92px;
 }
 
 
