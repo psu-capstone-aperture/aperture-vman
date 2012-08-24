@@ -558,10 +558,14 @@ div.form-actions {
 /* --------  ADD NEW CALENDAR TASK PAGE ----------*/
 
 /* align center date picker and add top padding */
-.page-node-add-event #field-event-date-add-more-wrapper .form-wrapper {
+.page-node-add-event .form-wrapper {
 	border: 0px;
-	margin-left:407px;
+	margin-left:203px;
 	padding-top: 1.7em;
+	font-family: 'Droid Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	color:#888;
 }
 
 /*--- date picker block ---*/
@@ -575,7 +579,7 @@ div.form-actions {
 	font-size: 12px;
 	color: #888;
 	position:absolute;
-	right: 535px;
+	right: 542px;
 	margin-top: 43px;
 }
 
@@ -629,12 +633,16 @@ div.form-actions {
 .page-node-add-event #edit-field-event-date-und-0-value-datepicker-popup-0, 
 .page-node-add-event #edit-field-event-date-und-0-value-timeEntry-popup-1, 
 .page-node-add-event #edit-field-event-date-und-0-value2-datepicker-popup-0, 
-.page-node-add-event #edit-field-event-date-und-0-value2-timeEntry-popup-1 {
+.page-node-add-event #edit-field-event-date-und-0-value2-timeEntry-popup-1,
+.page-node-add-event #edit-field-event-date-und-0-rrule-weekly-interval,
+.page-node-add-event #edit-field-event-date-und-0-rrule-count-child, 
+.page-node-add-event #edit-field-event-date-und-0-rrule-until-child-datetime-datepicker-popup-0,
+.page-node-add-event #edit-field-event-date-und-0-rrule-daily-interval-child {
 	font-family: 'Droid Sans', sans-serif;
 	padding: 7px;
 	font-size: 13px;
 	margin: 0px 0px 0x 2px;
-	background: rgb(253, 253, 253);
+	background: #FDFDFD;
 	border: 0;
 	color: #777;
 	border-top: 1px solid #E1E1E1;
@@ -644,6 +652,7 @@ div.form-actions {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+	margin: 1px;
 }
 
 .page-node-add-event #edit-field-event-date-und-0-value2 {
@@ -666,8 +675,44 @@ div.form-actions {
 /* remove spacing below the textarea */
 .page-node-add-event .form-textarea-wrapper {
 	height: 80px;
+	margin-left:227px;
 }
 
+/*Style for repeating dates */
+.page-node-add-event label[for=edit-field-event-date-und-0-value]{
+	position:relative;
+	right:32.7em;
+	top:23px;
+}
+
+.page-node-add-event #repeat-settings-fieldset {
+	padding: 0 15px;
+	background: rgb(252, 252, 252);
+	border: 0;
+	color: #777;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin: 10px 25px 0px 10px;
+}
+.page-node-add-event .form-item-field-event-date-und-0-rrule-weekly-INTERVAL{width: 200px; position:relative; left:75px;}
+.page-node-add-event label[for=edit-field-event-date-und-0-rrule-weekly-byday] {position:relative; right:89px;}
+.page-node-add-event .form-item-field-event-date-und-0-show-repeat-settings {width:72px;}
+.page-node-add-event .form-item-field-event-date-und-0-rrule-FREQ {width:48px;}
+.page-node-add-event #edit-field-event-date-und-0-rrule-weekly{ position:relative; right:311px;}
+.page-node-add-event .form-type-date-repeat-form-element-radios { text-align:left;}
+.page-node-add-event .range-of-repeat .form-radios > div {margin-left: 45px;}
+.page-node-add-event .range-of-repeat .until .form-wrapper {position:relative; top:-0.95em;}
+.page-node-add-event #edit-field-event-date-und-0-rrule-show-exceptions,
+.page-node-add-event label[for=edit-field-event-date-und-0-rrule-show-exceptions],
+.page-node-add-event #edit-field-event-date-und-0-rrule-show-additions,
+.page-node-add-event label[for=edit-field-event-date-und-0-rrule-show-additions] {display:none;}
+.page-node-add-event .form-item-field-event-date-und-0-rrule-daily-byday-radios { position:relative; right:17em;}
+.page-node-add-event #edit-actions { margin-top: -15px; }
 
 
 /* SUPER ADMIN VIEW FIX */
