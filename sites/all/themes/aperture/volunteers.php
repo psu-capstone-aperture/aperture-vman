@@ -1,52 +1,15 @@
 <?php
-// Retrieve the user ID from table role in the database
-$userType = 'volunteer'; // In this case is volunteer
+// Get user type
+$userType = 'volunteer';
 
-// Retrieve the role ID from table role
-$result = db_query('SELECT r.rid FROM {role} r WHERE r.name = :userType', array(':userType' => $userType));
-
-// Get the role ID store into $roleID
+// Query retrieving user ID, first name, last name of volunteers
+$result = db_query('SELECT f.field_first_name_value, l.field_last_name_value, u.name FROM {role} r, {users_roles} ur, {field_data_field_first_name} f, {field_data_field_last_name} l, {users} u WHERE u.uid = ur.uid AND f.entity_id = ur.uid AND l.entity_id = ur.uid AND ur.rid = r.rid AND r.name = :userType', array(':userType' => $userType));
+echo "<br />";
+// Output
 foreach ($result as $record) {
-	$roleID = $record->rid;
-}
-
-// Retrieve user ID matching the role ID
-$query = db_select('users_roles', 'ur');
-// Select the field uid in table ur
-$query
-	->fields('ur', array('uid'))
-	->condition('ur.rid', $roleID, '=');
-$result = $query->execute();
-// And store results into an array
-$arrayID = array();
-foreach($result as $record) {
-	$arrayID[] = $record->uid;
-}
-
-// Count the number of elements in the array
-$count = count($arrayID);
-
-// Find all the first names that matched with ID's found above
-$firstNameSelect = db_select('field_data_field_first_name', 'f');
-$firstNameSelect
-	->fields('f', array('entity_id', 'field_first_name_value'))
-	->condition('f.entity_id', $arrayID, "IN");
-
-// Join with last names and order them alphabetically
-$firstNameSelect->join('field_data_field_last_name', 'l', 'f.entity_id = l.entity_id');
-$firstNameSelect
-	->fields('f', array('field_first_name_value', 'entity_id'))
-	->fields('l', array('field_last_name_value'))
-	->orderBy('field_last_name_value', 'ASC');
-$result = $firstNameSelect->execute();
-foreach($result as $record) {
-	$userID = $record->entity_id;
+	$userName = $record->name;
 	$firstName = $record->field_first_name_value;
 	$lastName = $record->field_last_name_value;
-	echo '<a href="?q=user/' . $userID . '/">' . $firstName . ' ' . $lastName . '</a>';
+	echo '<a href="/drupal2/users/' . $userName . '/">' . $firstName . ' ' . $lastName . '</a>';
 	echo "<br /><br />";
-}
-
-if ($count > 1) {
-	echo "Total Volunteer Members: $count<br />";
 }
