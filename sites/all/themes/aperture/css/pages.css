@@ -637,8 +637,20 @@ p.small span, div.small span  {
 	color:rgba(214, 203, 203, 0.39);
 }
 
-/* ----------------------------- */
+/* --------- REGISTER PAGE --------- */
+.page-user-register #edit-field-t-shirt-size-und-none, .page-user-register label[for=edit-field-t-shirt-size-und-none] {
+	display: none !important;
+}
 
+.page-user-register label[for=edit-field-education-und-0-select-other-list] em[class=placeholder] {
+	font-style: normal;
+	padding-right: 3px; 
+}
+
+.page-user-register label[for=edit-field-know-paste-und-0-select-other-list] em[class=placeholder] {
+	font-style: normal;
+	padding-right: 5px;
+}
 
 /* --------- USERS PAGE ------------ */
 .page-admin-people .form-wrapper {
@@ -997,6 +1009,10 @@ p.small span, div.small span  {
 .page-user-edit #edit-contact,
 .page-user-edit #edit-timezone {
 	display:none;
+}
+
+.page-user-edit #edit-field-t-shirt-size-und-none, .page-user-edit label[for=edit-field-t-shirt-size-und-none] {
+	display: none !important;
 }
 
 /* Cancel User Accout Page */

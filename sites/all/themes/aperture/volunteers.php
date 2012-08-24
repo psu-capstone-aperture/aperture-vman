@@ -10,6 +10,6 @@ foreach ($result as $record) {
 	$userName = $record->name;
 	$firstName = $record->field_first_name_value;
 	$lastName = $record->field_last_name_value;
-	echo '<a href="/drupal2/users/' . $userName . '/">' . $firstName . ' ' . $lastName . '</a>';
+	echo '<a href="../users/' . $userName . '/">' . $firstName . ' ' . $lastName . '</a>';
 	echo "<br /><br />";
 }
