@@ -225,7 +225,7 @@ function getNotification() {
 		<?php 
 			$n = 0; 
 			do {
-				echo $pref[n];
+				echo $pref[$n];
 				?><br /><?php 
 				$n++;
 			} while ($n < count($pref));
