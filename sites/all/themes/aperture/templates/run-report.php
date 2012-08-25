@@ -26,7 +26,9 @@ ORDER BY first.field_first_name_value');
 
 	//convert startDate/endDate to Unix timestamp
 	$start_date = strtotime($startDate);
-	$end_date = strtotime($endDate);
+
+	//Should behave as expected w.r.t. end dates with this 
+	$end_date = strtotime("$endDate + 1 Day");
 
 	foreach ($calEvents as $calEvent) {
 
