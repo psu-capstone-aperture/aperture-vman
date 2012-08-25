@@ -318,8 +318,7 @@ td.menu-disabled {
 }
 
 #edit-field-birthday-und-0-value {
-	padding-left: 27px;
-	margin-left: 63px;
+	padding-left: 20px;
 }
 
 /* T-Shirt Size extend bottom space of register page */
@@ -385,7 +384,6 @@ td.menu-disabled {
     color: #888;
     display: inline;
     font-weight:normal;
-    border: 0px;
 }
 
 /* Current password in Profile Edit page */
@@ -479,7 +477,7 @@ td.menu-disabled {
 	margin-top:100px;
 }
 .register-account a {
-	color: #888;
+	color: #CFCFCF;
 	-o-transition: all 0.3s linear; 
   	-webkit-transition: all 0.3s linear; 
   	-moz-transition: all 0.3s linear; 
@@ -643,7 +641,11 @@ div.form-actions {
 .page-node-add-event #edit-field-event-date-und-0-rrule-weekly-interval,
 .page-node-add-event #edit-field-event-date-und-0-rrule-count-child, 
 .page-node-add-event #edit-field-event-date-und-0-rrule-until-child-datetime-datepicker-popup-0,
-.page-node-add-event #edit-field-event-date-und-0-rrule-daily-interval-child {
+.page-node-add-event #edit-field-event-date-und-0-rrule-daily-interval-child,
+.page-node-edit #edit-field-event-date-und-0-rrule-weekly-interval,
+.page-node-edit #edit-field-event-date-und-0-rrule-count-child, 
+.page-node-edit #edit-field-event-date-und-0-rrule-until-child-datetime-datepicker-popup-0,
+.page-node-edit #edit-field-event-date-und-0-rrule-daily-interval-child {
 	font-family: 'Droid Sans', sans-serif;
 	padding: 7px;
 	font-size: 13px;
@@ -721,6 +723,8 @@ div.form-actions {
 .page-node-add-event #edit-actions { margin-top: -15px; }
 
 
+
+
 /* SUPER ADMIN VIEW FIX */
 /* align center date picker and add top padding */
 .page-node-add-event.overlay #field-event-date-add-more-wrapper .form-wrapper {
@@ -764,7 +768,7 @@ div.form-actions {
 	font-size: 12px;
 	color: #888;
 	position:absolute;
-	right: 535px;
+	right: 542px;
 	margin-top: 43px;
 }
 
@@ -865,6 +869,59 @@ div.form-actions {
 .page-node-edit #edit-delete {
 	margin-right:10px;
 }
+
+
+
+
+
+/* ------- STYLE FOR REPEATING DATE ------- */
+
+.page-node-edit label[for=edit-field-event-date-und-0-value]{
+	position:relative;
+	right:32.7em;
+	top:23px;
+}
+
+
+.page-node-edit #repeat-settings-fieldset {
+	padding: 0 15px;
+	background: rgb(252, 252, 252);
+	border: 0;
+	color: #777;
+	border-top: 1px solid #E1E1E1;
+	border-left: 1px solid #E1E1E1;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #F0F0F0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin: 10px 25px 0px 10px;
+	width:455px;
+	float:right;
+}
+
+.page-node-edit .form-wrapper {
+	border:0;
+	padding-top: 1.7em;
+	font-family: 'Droid Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	color:#888;
+}
+
+.page-node-edit .form-item.form-type-checkbox { width:470px;}
+.page-node-edit .form-item.form-type-select label[for=edit-field-event-date-und-0-rrule-freq] { position:relative; right: 450px;}
+.page-node-edit label[for=edit-field-event-date-und-0-rrule-show-exceptions],
+.page-node-edit #edit-field-event-date-und-0-rrule-show-exceptions,
+.page-node-edit label[for=edit-field-event-date-und-0-rrule-show-additions],
+.page-node-edit #edit-field-event-date-und-0-rrule-show-additions {display:none;}
+.page-node-edit .form-type-date-repeat-form-element-radios { text-align:left;}
+.page-node-edit .range-of-repeat .form-radios > div {margin-left: 45px;}
+.page-node-edit .range-of-repeat .until .form-wrapper {position:relative; top:-0.95em; right:404px;}
+.page-node-edit .form-type-date-popup {position:relative; left:406px;}
+.page-node-edit .form-item-field-event-date-und-0-rrule-weekly-INTERVAL{width: 200px; position: relative; top: -6px; right: 29px; }
+.page-node-edit label[for=edit-field-event-date-und-0-rrule-weekly-byday] {position:relative; right:380px;}
+.page-node-edit #edit-field-event-date-und-0-rrule-weekly-byday {position:relative; right:80px;}
 
 
 
