@@ -107,14 +107,11 @@ function getNotification() {
     $fname = db_query("SELECT n.field_first_name_value FROM {field_data_field_first_name} n WHERE n.entity_id = $user->uid")->fetchField();
     $lname = db_query("SELECT n.field_last_name_value FROM {field_data_field_last_name} n WHERE n.entity_id = $user->uid")->fetchField();
     $phone = db_query("SELECT n.field_phone_number_value FROM {field_data_field_phone_number} n WHERE n.entity_id = $user->uid")->fetchField();
-    $pref =  db_query("SELECT n.field_athlete_group_preference_value FROM {field_data_field_athlete_group_preference} n WHERE n.entity_id = $user->uid")->fetchField();
+
     $image = db_query("SELECT n.uri FROM {file_managed} n WHERE n.fid = $user->picture")->fetchField();
     $imageURL = "http://codingroup.com/aperture/admin/images/no-image.png";
     $timeOffset = getTimeOffset();
-    
-    if (!$pref) {
-        $pref = "none";
-    }
+
     if ($image) {
         $imageURL = file_create_url($image);
     }
@@ -216,8 +213,6 @@ function getNotification() {
             <span style="color:#b1b1b1">Email:</span> <?php echo $user->mail; ?>
             <br />
             <span style="color:#b1b1b1">Phone:</span> <?php echo $phone; ?>
-            <br />
-            <span style="color:#b1b1b1">Tutoring Preferences:</span><br /><?php echo $pref; ?>
             <br />
         </div>
     </div>
