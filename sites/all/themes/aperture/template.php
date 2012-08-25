@@ -110,7 +110,7 @@ function getNotification() {
 
     /* there can be more than one preference, duh */
 
-    $pref[] =  db_query("SELECT n.field_athlete_group_preference_value FROM {field_data_field_athlete_group_preference} n WHERE n.entity_id = $user->uid")
+    $pref[] =  db_query("SELECT n.field_athlete_group_preference_value FROM {field_data_field_athlete_group_preference} n WHERE n.entity_id = $user->uid");
 
     $image = db_query("SELECT n.uri FROM {file_managed} n WHERE n.fid = $user->picture")->fetchField();
     $imageURL = "http://codingroup.com/aperture/admin/images/no-image.png";
