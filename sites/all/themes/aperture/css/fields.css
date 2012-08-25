@@ -39,6 +39,7 @@
 }
 
 .field-type-text-long {
+	padding-bottom: 20px;
 }
 
 .field-type-text-with-summary {
@@ -63,6 +64,7 @@
 }
 
 .field-type-list-text {
+	padding-bottom: 20px;
 }
 
 .field-type-list-boolean {
@@ -79,6 +81,7 @@
  */
 
 .field-type-datetime { /* Always use "datetime" when creating new CCK date fields. "date" and "datestamp" are legacy types. */
+	padding-bottom: 20px;
 }
 
 .field-type-node-reference {
