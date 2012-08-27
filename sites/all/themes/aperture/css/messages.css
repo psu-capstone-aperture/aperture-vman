@@ -110,6 +110,25 @@ table.privatemsg-list {
 	padding-left: 10px;
 }
 
+.section-messages tbody td:first-child {
+    -webkit-border-radius: 7px 0 0 7px;
+       -moz-border-radius: 7px 0 0 7px;
+            border-radius: 7px 0 0 7px;
+    padding: 5px 0 0 5px;
+    text-align: left;
+}
+
+.section-messages tbody td:last-child {
+    -webkit-border-radius: 0 7px 7px 0;
+       -moz-border-radius: 0 7px 7px 0;
+            border-radius: 0 7px 7px 0;
+    padding: 5px 45px 1px 15px;
+}
+
+.section-messages tbody .even {
+    border: 0;
+}
+
 .page-calendar .views-field-field-first-name,
 .page-calendar .views-field-field-last-name {
     display: inline;
