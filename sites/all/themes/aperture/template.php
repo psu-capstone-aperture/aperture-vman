@@ -161,7 +161,7 @@ function getNotification() {
                 <?php
                 $result = db_query($q1);
                 while ($record = $result->fetchAssoc()) { ?>
-                    <li><?php echo $record["title"]; ?> Today <?php echo $record["start"]; ?> to <?php echo $record["end"]; ?> </li>
+                    <li><?php echo "Volunteer Shift"; ?> Today <?php echo $record["start"]; ?> to <?php echo $record["end"]; ?> </li>
                 <?php } ?>
                 </ul>
             </div>
@@ -174,7 +174,7 @@ function getNotification() {
                 <?php
                 $result = db_query($q2);
                 while ($record = $result->fetchAssoc()) { ?>
-                    <li><?php echo $record["title"]; ?> <?php echo $record["date"]; ?> <?php echo $record["start"]; ?> to <?php echo $record["end"]; ?> </li>
+                    <li><?php echo "Volunteer Shift"; ?> <?php echo $record["date"]; ?> <?php echo $record["start"]; ?> to <?php echo $record["end"]; ?> </li>
                 <?php } ?>
                 </ul>
             </div>
@@ -187,7 +187,7 @@ function getNotification() {
                 <?php
                 $result = db_query($q3);
                 while ($record = $result->fetchAssoc()) { ?>
-                    <li><?php echo $record["title"]; ?> <?php echo $record["date"]; ?> <?php echo $record["start"]; ?> to <?php echo $record["end"]; ?> </li>
+                    <li><?php echo "Volunteer Shift"; ?> <?php echo $record["date"]; ?> <?php echo $record["start"]; ?> to <?php echo $record["end"]; ?> </li>
                 <?php } ?>
                 </ul>
             </div>
