@@ -49,3 +49,6 @@
 [submodule "sites/all/modules/captcha"]
 	path = sites/all/modules/captcha
 	url = git://drupalcode.org/project/captcha.git
+[submodule "sites/all/modules/auto_nodetitle"]
+	path = sites/all/modules/auto_nodetitle
+	url = git://drupalcode.org/project/auto_nodetitle.git
