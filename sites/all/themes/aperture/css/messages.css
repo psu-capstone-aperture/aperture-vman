@@ -110,3 +110,12 @@ table.privatemsg-list {
 	padding-left: 10px;
 }
 
+.page-calendar .views-field-field-first-name,
+.page-calendar .views-field-field-last-name {
+    display: inline;
+}
+
+.page-calendar .field-label-group-wrap {
+    display: block;
+}
+
