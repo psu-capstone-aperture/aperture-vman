@@ -129,6 +129,10 @@ table.privatemsg-list {
     border: 0;
 }
 
+.section-messages tbody input.form-checkbox {
+    margin-bottom: 8px;
+}
+
 .page-calendar .views-field-field-first-name,
 .page-calendar .views-field-field-last-name {
     display: inline;
