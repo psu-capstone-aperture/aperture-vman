@@ -129,6 +129,12 @@ table.privatemsg-list {
     border: 0;
 }
 
+.section-messages tbody td.empty.message {
+    -webkit-border-radius: 7px 7px 7px 7px;
+       -moz-border-radius: 7px 7px 7px 7px;
+            border-radius: 7px 7px 7px 7px;
+}
+
 .section-messages tbody input.form-checkbox {
     margin-bottom: 8px;
 }
