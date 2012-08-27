@@ -1126,3 +1126,109 @@ p.small span, div.small span  {
 .page-taxonomy-term-edit .confirmation div { text-align:center; font-size:15px;}
 .page-taxonomy-term-edit .confirmation div #edit-submit, 
 .page-taxonomy-term-edit .confirmation div #edit-cancel { margin-left:7px; top:10px}
+
+/* VOLUNTEER LIST PAGE */
+
+.vol-list-title {
+	font-family: 'Homenaje', sans-serif !important;
+	text-transform: uppercase;
+	font-size: 23px;
+	color: #CCCCCC;
+	margin: 0px 0px 15px 0px;
+	padding: 0px;
+	letter-spacing: -1px;
+}
+
+.vol-list {
+	font-family: 'Droid Sans', sans-serif;
+	color: #3A3939;
+	font-size: 0.8em;
+	border:none;
+	width: 770px;
+	margin-top: 15px;
+}
+
+#head-vol-list {
+	font-family: 'Homenaje', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.6em;
+	color: rgba(41, 41, 41, 0.75);
+	letter-spacing: -1px;
+	text-shadow: 0px 1px 1px rgba(177, 177, 177, 0.79);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	background-color: #65BB68;
+	height: 30px;
+}
+
+.vol-list td:first-child {
+	-webkit-border-radius: 7px 0 0 7px;
+	border-radius: 7px 0 0 7px;
+}
+
+.vol-list td:last-child {
+	-webkit-border-radius: 0 7px 7px 0;
+	border-radius: 0 7px 7px 0;
+}
+
+.list-nums-head {
+	padding-left: 8px;
+	width: 15px;
+	font-size: 17px;
+	color: rgba(104, 5, 5, 0.58);
+}
+
+.vol-list td:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.vol-list tr:nth-child(even) {
+	background: #f6f6f6;
+}
+
+.vol-list tr:nth-child(odd) {
+	background: rgba(253, 253, 253, 0.64);
+}
+
+.vol-list tr:hover {
+  background: rgba(253, 253, 253, 0.64);
+  -o-transition: all 0.3s linear; 
+  -webkit-transition: all 0.3s linear; 
+  -moz-transition: all 0.3s linear; 
+  -ms-transition: all 0.3s linear; 
+  transition: all 0.3s linear; 
+}
+
+.vol-list tr {
+	height: 2.4em;
+}
+
+.list-name-col-left {
+	padding-left:1px;
+	width: 335px;
+}
+
+.list-name-col-right {
+	border-radius: 5px;
+	width:100px;
+}
+
+.list-nums-head {
+	padding-left: 8px;
+	width: 15px;
+	font-size: 17px;
+	color: rgba(104, 5, 5, 0.58);
+}
+
+.list-nums {
+	font-size: 12px;
+	padding-left:10px;
+	color:rgba(214, 203, 203, 0.39);
+}
+
+.vol-list-count {
+	font-size: 13px;
+	padding-right: 20px;
+	color: rgba(0,0,0,0.5);
+}

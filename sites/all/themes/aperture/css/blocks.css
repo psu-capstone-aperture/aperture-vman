@@ -35,9 +35,12 @@ h2.block-title { /* Block title */
 /* Volunteer List Block */
 #block-block-1 p {
 	font-family: 'Droid Sans', sans-serif;
-	font-size: 15px;
 	font-weight: normal;
-	padding-left: 30px;
+	padding-left: 15px;
+}
+
+#block-block-1 h2 {
+	display: none;
 }
 
 /* Staff List Block */
