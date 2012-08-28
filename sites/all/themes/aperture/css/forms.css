@@ -321,6 +321,10 @@ td.menu-disabled {
 	padding-left: 20px;
 }
 
+.page-user-register #edit-field-birthday-und-0-value {
+	margin-left: 63px;
+}
+
 /* T-Shirt Size extend bottom space of register page */
 #edit-field-t-shirt-size {
 	padding-bottom: 20px;
