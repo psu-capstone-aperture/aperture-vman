@@ -12,10 +12,10 @@
 	url = git://drupalcode.org/project/token.git
 [submodule "sites/all/modules/calendar"]
 	path = sites/all/modules/calendar
-	url = git://github.com/Ruva/aperture-calendar.git
+	url = git://github.com/psu-capstone-aperture/aperture-calendar.git
 [submodule "sites/all/modules/date"]
 	path = sites/all/modules/date
-	url = git://github.com/Ruva/aperture-date.git
+	url = git://github.com/psu-capstone-aperture/aperture-date.git
 [submodule "sites/all/modules/views"]
 	path = sites/all/modules/views
 	url = git://drupalcode.org/project/views.git
