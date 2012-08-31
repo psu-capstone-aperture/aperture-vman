@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "Deleting old snapshots..."
+
+virsh snapshot-delete dansweet weekly > /dev/null 2>&1 &
+virsh snapshot-delete ebelt weekly > /dev/null 2>&1 &
+virsh snapshot-delete jtrent weekly > /dev/null 2>&1 &
+virsh snapshot-delete pminh weekly > /dev/null 2>&1 &
+virsh snapshot-delete ruva weekly > /dev/null 2>&1 &
+virsh snapshot-delete yuxin weekly > /dev/null 2>&1 &
+
+wait
+echo "Deleted old snapshots."
+
+echo "Generating new snapshots..."
+virsh snapshot-create-as dansweet weekly &
+virsh snapshot-create-as ebelt weekly &
+virsh snapshot-create-as jtrent weekly &
+virsh snapshot-create-as pminh weekly &
+virsh snapshot-create-as ruva weekly &
+virsh snapshot-create-as yuxin weekly &
+
+wait
+echo "Generated new snapshots."

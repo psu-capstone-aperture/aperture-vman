@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo "Deleting old snapshots..."
+
+virsh snapshot-delete master nightly > /dev/null 2>&1 &
+virsh snapshot-delete dansweet nightly > /dev/null 2>&1 &
+virsh snapshot-delete ebelt nightly > /dev/null 2>&1 &
+virsh snapshot-delete jtrent nightly > /dev/null 2>&1 &
+virsh snapshot-delete pminh nightly > /dev/null 2>&1 &
+virsh snapshot-delete ruva nightly > /dev/null 2>&1 &
+virsh snapshot-delete yuxin nightly > /dev/null 2>&1 &
+
+wait
+echo "Deleted old snapshots."
+
+echo "Generating new snapshots..."
+virsh snapshot-create-as master nightly &
+virsh snapshot-create-as dansweet nightly &
+virsh snapshot-create-as ebelt nightly &
+virsh snapshot-create-as jtrent nightly &
+virsh snapshot-create-as pminh nightly &
+virsh snapshot-create-as ruva nightly &
+virsh snapshot-create-as yuxin nightly &
+
+wait
+echo "Generated new snapshots."
