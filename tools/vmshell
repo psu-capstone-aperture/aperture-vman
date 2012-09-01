@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#Copyright (C) 2012 Joseph Woodruff
-#VM Manager shell replacement for controlling libvirt
-#Released under the MIT license, see COPYING for details.
-
 export USER=$(whoami)
 
 export TEMP="/tmp/$USER-dialog.ans"
@@ -58,9 +54,40 @@ power ()
 }
 
 snapshots () {
-	# do something
-	dialog --msgbox "Not implemented yet." 0 0
-	return
+        # do something
+        #dialog --msgbox "Not implemented yet." 0 0
+
+        virsh snapshot-list $USER | tail -n +3 | sed 's/^ *//g'| \
+        sed '/^$/d' > $TEMP
+
+        ar=()
+        while read n s ; do
+                ar+=($n "$s")
+        done < $TEMP
+
+        dialog  --backtitle "VM Manager" --title "Snapshot Manager" \
+                --menu "Revert to snapshot: " 0 0 0 "${ar[@]}" 2> $TEMP
+
+        if [[ $? != 0 ]]
+        then
+                return
+        fi
+
+        SNAPSHOT=$(cat $TEMP)
+
+        dialog --backtitle "VM Manager" --title "WARNING" \
+                --yesno "This will erase all changes made after the \
+                date on snapshot "$SNAPSHOT", and may take several \
+                minutes to complete, are you sure?" 0 0
+
+        if [[ $? != 0 ]]
+        then
+                return
+        fi
+
+        virsh snapshot-revert $USER $SNAPSHOT &
+
+        return
 }
 
 main () {
