@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Copyright (C) 2012 Joseph Woodruff
+#VM Manager shell replacement for controlling libvirt
+#Released under the MIT license, see COPYING for details.
+
 export USER=$(whoami)
 
 export TEMP="/tmp/$USER-dialog.ans"
